@@ -4,5 +4,11 @@ body{background:#eee;}
 .header a{color:#fff;}
 .header .divider{color:#fff;margin:0 0.5em;font-size:12px;opacity:0.5;}
 /* body */
-.body{margin:80px auto 80px auto;}
+.body{margin:60px auto 10px auto;}
 .body .form-register{margin-left:180px;}
+.body .form-register .pwd-level{width:56px;}
+/* footer */
+.well.footer{text-align:center;font-size:12px;color:#99999;margin:8px 0;padding:8px;}
+.well.footer .breadcrumb{margin-bottom:0;}
+.well.footer .breadcrumb a{color:#999;}
+.well.footer p{margin-bottom:2px;}

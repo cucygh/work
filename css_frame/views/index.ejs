@@ -21,7 +21,7 @@
   <body>
 	<div class="navbar navbar-fixed-top header">
 		<div class="container">
-			<a href=""><img src="https://d17f28g3dsa4vh.cloudfront.net/img/kippt-logo-w.png" width="45"></a>
+			<a href=""><img src="images/kippt-logo-w.png" width="45" height="45" alt="logo"></a>
 			<a href="#" class="login pull-right">登录</a>
 			<span class="divider pull-right">|</span>
 			<a href="#" class="rigister pull-right">注册</a>
@@ -29,10 +29,111 @@
 	</div>
 	
 	<div class="container body">
-		
+		<form class="bs-docs-example form-horizontal form-register">
+            <div class="control-group">
+              <label class="control-label" for="inputWarning">注册类别</label>
+              <div class="controls">
+                <label class="radio inline">
+				  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+				  个人注册
+				</label>
+				<label class="radio inline">
+				  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+				 团体注册
+				</label>
+              </div>
+            </div>
+			<div class="control-group">
+              <label class="control-label" for="inputWarning">用户名</label>
+              <div class="controls">
+                <input type="text" id="inputWarning">
+                <span class="help-inline">用户名已被占用</span>
+              </div>
+            </div>
+			
+            <div class="control-group">
+              <label class="control-label" for="inputError">证件类型</label>
+              <div class="controls">
+                <select>
+				  <option>身份证</option>
+				  <option>军官证</option>
+				  <option>驾照</option>				
+				  <option>营业执照</option>				
+				</select>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="inputInfo">证件号码</label>
+              <div class="controls">
+                <input type="text" id="inputInfo">
+                <span class="help-inline">号码无效</span>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="inputSuccess">密  码</label>
+              <div class="controls">
+                <input type="password" id="inputSuccess">				
+                <span class="help-inline">密码过于简单</span>
+				</br>
+				<div class="btn-group">
+				  <button class="btn pwd-level"></button>
+				  <button class="btn pwd-level"></button>
+				  <button class="btn pwd-level"></button>			 
+				  <button class="btn pwd-level"></button>			 
+				</div>
+              </div>
+            </div>
+			<div class="control-group">
+              <label class="control-label" for="inputSuccess">确认密码</label>
+              <div class="controls">
+                <input type="password" id="inputSuccess">				
+                <span class="help-inline">密码不一致</span>
+              </div>
+            </div>
+			<div class="control-group">
+              <label class="control-label" for="inputSuccess">联系电话</label>
+              <div class="controls">
+                <input type="password" id="inputSuccess">				
+                <span class="help-inline">电话格式不对</span>
+              </div>
+            </div>
+			<div class="control-group">
+              <label class="control-label" for="inputSuccess">邮箱</label>
+              <div class="controls">
+                <input type="password" id="inputSuccess">				
+                <span class="help-inline">邮箱格式不对</span>
+              </div>
+            </div>
+			<div class="control-group">
+              <div class="controls">
+                <label class="checkbox">
+				  <input type="checkbox" value="">
+				  我已阅读并同意 <a href="#">《思维注册协议》</a>
+				</label>				
+              </div>
+            </div>
+			<div class="control-group">
+              <div class="controls">
+               <button class="btn btn-large btn-primary btn-danger" type="button">立即注册</button>		
+              </div>
+            </div>
+			
+			
+          </form>
 	</div>
 	
-	
+	<div class="well well-large footer">
+		<div class="container">
+			<ul class="breadcrumb">
+			  <li><a href="#">关于我们</a><span class="divider">|</span></li>
+			  <li><a href="#">联系我们</a><span class="divider">|</span></li>
+			  <li><a href="#">客户服务</a><span class="divider">|</span></li>
+			  <li><a href="#">法律声明和隐私条款</a></li>
+			</ul>
+			<p class="muted"><span>Copyright &copy; 2012-2013 Cblink. All Rights Reserved.</span></p>
+			<p class="muted"><span class="">中国影像版权银行｜京ICP备12044750号-2 </span></p>
+		</div>
+	</div>
 	
 	
 	
