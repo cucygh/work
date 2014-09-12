@@ -4,9 +4,11 @@ body{background:#eee;}
 .header a{color:#fff;}
 .header .divider{color:#fff;margin:0 0.5em;font-size:12px;opacity:0.5;}
 /* body */
-.body{margin:60px auto 10px auto;}
+.body{margin:100px auto 10px auto;height:800px;min-height:800px;}
 .body .form-register{margin-left:180px;}
 .body .form-register .pwd-level{width:56px;}
+.body .form-register .file{opacity: 0;filter: alpha(opacity=0);display: block;position: absolute;left: 220px;top: 0;z-index: 200;height: 30px;width: 50px;overflow: hidden;font-size: 8px;}
+.body .file_area{position:relative;}
 /* footer */
 .well.footer{text-align:center;font-size:12px;color:#99999;margin:8px 0;padding:8px;}
 .well.footer .breadcrumb{margin-bottom:0;}
