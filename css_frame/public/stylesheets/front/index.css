@@ -16,7 +16,7 @@ body{background:#eee;}
 .well.footer p{margin-bottom:2px;}
 /* login */
 .tab-pane .ms-tishi {font-size: 0.8em; color: #c5c1c1;}
-.container .row .login-out {background: #fff;border: 1px #afaaaa solid;padding: 0 0 20px; border-radius: 5px;}
+.container .row .login-out,#login-modal .login-out{background: #fff;border: 1px #afaaaa solid;padding: 0 0 20px; border-radius: 5px;}
 .tabbable .ms-personal {width: 80%;margin: 0 auto;}
 .tab-pane .ms-forget {float:right;font-size: .8em;}
 .tab-pane .ms-forget a:first-child {color: #bababa;}
@@ -25,8 +25,8 @@ body{background:#eee;}
 .login-out .tit-color {width: 100%;height: 30px;background: #CC3333; border-radius: 5px 5px 0 0;}
 .tab-pane .ms-denglu {background: #CC3333;}
 
-
-
+#login-modal{width:300px;}
+#login-modal .login-out{margin-left:0;}
 
 
 

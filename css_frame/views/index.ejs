@@ -22,9 +22,9 @@
 	<div class="navbar navbar-fixed-top header">
 		<div class="container">
 			<a href=""><img src="images/kippt-logo-w.png" width="45" height="45" alt="logo"></a>
-			<a href="#" class="login pull-right">登录</a>
+			<a href="#" data-toggle="modal" data-target="#login-modal" class="login pull-right">登录</a>
 			<span class="divider pull-right">|</span>
-			<a href="#" class="rigister pull-right">注册</a>
+			<a href="#" data-toggle="modal" data-target="#login-modal" class="rigister pull-right">注册</a>
 		</div>
 	</div>
 	
@@ -151,7 +151,24 @@
 	</div>
 	
 	
-	
+	<div class="modal hide fade" id="login-modal">
+		  <div class="span4 login-out">				
+			<button type="button" class="close ms-login-colse" data-dismiss="alert">×</button>
+			<div class="tit-color"></div>
+			<div class="tabbable ms-loginwrap">					
+				<div class="tab-content ms-personal">
+					<div class="tab-pane active" id="tab1">
+						<input class="input-large" type="text" placeholder="邮箱/用户名">
+						<p class="text-error ms-tishi"><i class="icon-exclamation-sign"></i>邮箱/用户名不能为空</p>
+						<input class="input-large" type="text" placeholder="登录密码">
+						<p class="text-error ms-tishi"><i class="icon-exclamation-sign"></i>登录密码不能为空</p>
+						<p class="text-right ms-forget"><a href="#">忘记密码？</a>&nbsp;|&nbsp;<a href="#">免费注册</a></p>
+						<button type="submit" class="btn span3 btn-primary ms-denglu">登录</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	
 	<script type="text/javascript" src="javascripts/jquery/jquery-1.7.2.min.js"></script>
