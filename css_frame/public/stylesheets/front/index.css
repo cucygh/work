@@ -14,3 +14,21 @@ body{background:#eee;}
 .well.footer .breadcrumb{margin-bottom:0;}
 .well.footer .breadcrumb a{color:#999;}
 .well.footer p{margin-bottom:2px;}
+/* login */
+.tab-pane .ms-tishi {font-size: 0.8em; color: #c5c1c1;}
+.container .row .login-out {background: #fff;border: 1px #afaaaa solid;padding: 0 0 20px; border-radius: 5px;}
+.tabbable .ms-personal {width: 80%;margin: 0 auto;}
+.tab-pane .ms-forget {float:right;font-size: .8em;}
+.tab-pane .ms-forget a:first-child {color: #bababa;}
+.login-out .ms-loginwrap {padding-top: 30px;}
+.login-out .ms-login-colse {padding: 5px 10px 0 0;}
+.login-out .tit-color {width: 100%;height: 30px;background: #CC3333; border-radius: 5px 5px 0 0;}
+.tab-pane .ms-denglu {background: #CC3333;}
+
+
+
+
+
+
+
+
