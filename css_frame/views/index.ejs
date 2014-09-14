@@ -152,25 +152,60 @@
 	
 	<!-- 登录窗口 -->
 	<div class="modal hide fade" id="login-modal" data-login>
-		  <div class="span4 login-out">				
+		  <div class="login-out">				
 			<button type="button" class="close ms-login-colse">×</button>
 			<div class="tit-color">账号登录</div>
 			<div class="tabbable ms-loginwrap">					
-				<div class="tab-content ms-personal">
-					<div class="tab-pane active" id="tab1">
-						<label for="login"></label>
-						<input class="input-large m-login-user" type="text" placeholder="用户名">
-						<p class="text-error ms-tishi"><i class="icon-exclamation-sign hide"></i></p>
-						<input class="input-large" type="password" placeholder="密码">
-						<p class="text-error ms-tishi"><i class="icon-exclamation-sign hide"></i></p>
-						<p class="text-right ms-forget hide"><a href="#">忘记密码？</a>&nbsp;|&nbsp;<a href="/">免费注册</a></p>
-						<p class="text-right ms-forget"><a href="#">忘记密码？</a>&nbsp;|&nbsp;<a href="/">免费注册</a></p>
-						<button type="submit" class="btn span3 btn-primary ms-denglu">登 录</button>
+				<div class="tab-content ms-personal">				
+					<div class="tab-pane active form-horizontal" id="tab1">
+						<div class="control-group">
+							<label class="control-label ms-username" for="login">用户名：</label>
+							<div class="controls ms-control">
+								<input type="text"  placeholder="用户名">
+								<a href="#" class="help-inline ms-forget">忘记账号？</a>
+							</div>
+							<p class="text-error ms-tishi"><i class="icon-exclamation-sign hide"></i></p>
+						</div>
+						<div class="control-group">
+							<label class="control-label ms-username" for="login">密码：</label>
+							<div class="controls ms-control">
+								<input type="text"  placeholder="密码">
+								<a href="#" class="help-inline ms-forget">忘记密码？</a>
+							</div>
+							<p class="text-error ms-tishi"><i class="icon-exclamation-sign hide"></i></p>
+						</div>
+						
+						<label class="checkbox ms-checkbox">
+							<input type="checkbox"> 下次自动登录(公共场合慎用)
+						</label>
+						
+						<div class="form-actions ms-form-action">
+							<button type="submit" class="btn ms-denglu">登 录</button>
+							<a hrsf="#" class="ms-zhuce">注册新账号</a>
+						</div>
+						
+	
+						
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<!-- 登录窗口 -->
 	
 	
