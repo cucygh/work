@@ -15,7 +15,7 @@
 	/**
 	 * 定义页面空间
 	 */
-	Q.pages = {};
+	Q.pages = Q.pages || {};
 	// 是否
 	Q.pages.flag=false;
 	/**

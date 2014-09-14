@@ -22,11 +22,12 @@ body{background:#eee;}
 .tab-pane .ms-forget a:first-child {color: #bababa;}
 .login-out .ms-loginwrap {padding-top: 30px;}
 .login-out .ms-login-colse {padding: 5px 10px 0 0;}
-.login-out .tit-color {width: 100%;height: 30px;background: #CC3333; border-radius: 5px 5px 0 0;}
+.login-out .tit-color {width: 100%;height: 30px;background: #CC3333; border-radius: 5px 5px 0 0;color: #fff;line-height: 30px;text-indent: 1em;font-weight: bolder;}
 .tab-pane .ms-denglu {background: #CC3333;}
 
-#login-modal{width:300px;}
+#login-modal{width:300px;margin:-120px 0 0 -150px;}
 #login-modal .login-out{margin-left:0;}
+#login-modal .ms-denglu{margin-left:0;}
 
 
 
