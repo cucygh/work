@@ -1,23 +1,65 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
+	// Project configuration.
+	grunt.initConfig({
+		pkg : grunt.file.readJSON('package.json'),
+		uglify : {
+			options : {
+				banner : '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n' //æ·»åŠ banner
+			},
+			compileJS : {
+				files : [{
+						expand : true,
+						cwd : 'public', //jsç›®å½•ä¸‹
+						src : '**/*.js', //æ‰€æœ‰jsæ–‡ä»¶
+						dest : 'published' //è¾“å‡ºåˆ°æ­¤ç›®å½•ä¸‹
+					}
+				]
+			},
 
-  // Project configuration.
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-      },
-      build: {
-        src: 'public/<%= pkg.name %>.js',
-        dest: 'build/<%= pkg.name %>.min.js'
-      }
-    }
-  });
+		},
+		cssmin : {
+			compileCSS : {
+				expand : true,
+				cwd : 'public',
+				src : ['**/*.css', '!**/*.min.css'],
+				dest : 'published',
+				ext : '.min.css'
+			}
+		},
+		copy : {
+			main : {
+				files : [{
+						expand : true,
+						src : ['public/images/*'],
+						dest : 'dest/images',
+						filter : 'isFile'
+					}
+				]
+			}
+		},
+		concat : {
+			merge : {
+				files : {
+					'published/merge/base.js' : ['public/javascripts/jquery/jquery-1.7.2.js','public/javascripts/bootstrap/bootstrap.js','public/javascripts/gallery/base/1.0.0/base.js'],
+					'published/merge/app.js' : ['public/javascripts/gallery/ajax/1.0.0/ajax.js', 'public/javascripts/app/login/1.0.0/login.js', 'public/javascripts/app/register/1.0.0/register.js'],
+				}
+			},
+		},
+		clean : {
+			build : {
+				src : ["published"]
+			}
+		}
+	});
 
-  // ¼ÓÔØ°üº¬ "uglify" ÈÎÎñµÄ²å¼ş¡£
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+	// åŠ è½½åŒ…å« "uglify" ä»»åŠ¡çš„æ’ä»¶ã€‚
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-concat');
 
-  // Ä¬ÈÏ±»Ö´ĞĞµÄÈÎÎñÁĞ±í¡£
-  grunt.registerTask('default', ['uglify']);
+	// é»˜è®¤è¢«æ‰§è¡Œçš„ä»»åŠ¡åˆ—è¡¨ã€‚
+	grunt.registerTask('default', ['clean:build', 'uglify:compileJS', 'cssmin:compileCSS', 'copy:main','concat:merge']);
 
 };

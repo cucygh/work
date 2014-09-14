@@ -1,0 +1,2 @@
+/*! application-name 2014-09-14 */
+!function(a){var b=a.jQuery,c=a.Q||{};c.pages=c.pages||{},c.pages.login=function(){var a=b(".modal[data-login]");a.on("click",".close",function(a){a.preventDefault();var c=b(this);c.parents(".modal[data-login]").modal("hide")}),a.on("click",".close",function(a){a.preventDefault();var c=b(this);c.parents(".modal[data-login]").modal("hide")})},b(function(){c.pages.login()})}(window);

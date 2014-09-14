@@ -1,0 +1,2 @@
+/*! application-name 2014-09-14 */
+!function(a){var b=a.jQuery,c=a.Q||{};c.ajax={},c.ajax.post=function(a,c,d,e){b.ajax({url:a,type:"POST",dataType:"json",data:c,success:function(a){d&&d.call(null,a)},error:function(a){e&&e.call(null,a)},timeout:2e3})},c.ajax.config={user_check:"/user/check/",login:"/user/login/",user_regist:"/user/regist"},a.Q=b.extend(!0,a.Q||{},c)}(window);
