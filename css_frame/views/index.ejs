@@ -21,15 +21,14 @@
   <body>
 	<div class="navbar navbar-fixed-top header">
 		<div class="container">
-			<a href=""><img src="images/kippt-logo-w.png" width="45" height="45" alt="logo"></a>
+			<a href=""><img class="img_logo" src="images/kippt-logo-w.png" width="45" alt="logo"></a>
 			<a href="#" data-toggle="modal" data-target="#login-modal" class="login pull-right">登录</a>
 			<span class="divider pull-right">|</span>
 			<a href="#" class="rigister pull-right">注册</a>
 		</div>
 	</div>
-	
 	<div class="container body">
-		<form class="bs-docs-example form-horizontal form-register">
+		<form id="form-rigister" class="bs-docs-example form-horizontal form-register" enctype="multipart/form-data" action="/user/register.do" method="POST">
             <div class="control-group">
               <label class="control-label" for="inputWarning">注册类别</label>
               <div class="controls">
@@ -46,14 +45,14 @@
 			<div class="control-group">
               <label class="control-label" for="set_user">用户名</label>
               <div class="controls">
-                <input type="text" id="set_user">
+                <input type="text" id="set_user" name="set_user">
                 <span class="help-inline"></span>
               </div>
             </div>
             <div class="control-group">
               <label class="control-label" for="set_pwd">密  码</label>
               <div class="controls">
-                <input type="password" id="set_pwd">
+                <input type="password" id="set_pwd" name="set_pwd">
                 <span class="help-inline"></span>
 				</br>
 				<div class="btn-group">
@@ -67,28 +66,28 @@
 			<div class="control-group">
               <label class="control-label" for="repeat_pwd">确认密码</label>
               <div class="controls">
-                <input type="password" id="repeat_pwd">				
+                <input type="password" id="repeat_pwd" name="repeat_pwd">				
                 <span class="help-inline"></span>
               </div>
             </div>
 			<div class="control-group">
               <label class="control-label" for="set_mobile">联系电话</label>
               <div class="controls">
-                <input type="text" id="set_mobile">				
+                <input type="text" id="set_mobile" name="set_mobile">				
                 <span class="help-inline"></span>
               </div>
             </div>
 			<div class="control-group">
               <label class="control-label" for="set_email">邮箱</label>
               <div class="controls">
-                <input type="text" id="set_email">				
+                <input type="text" id="set_email" name="set_email">				
                 <span class="help-inline"></span>
               </div>
             </div>
 			<div class="control-group">
-              <label class="control-label" for="inputWarning">真实姓名</label>
+              <label class="control-label" for="real_name">真实姓名</label>
               <div class="controls">
-                <input type="text" id="inputWarning">
+                <input type="text" id="real_name" name="real_name">
                 <span class="help-inline"></span>
               </div>
             </div>
@@ -105,7 +104,7 @@
             <div class="control-group">
               <label class="control-label" for="set_identity">证件号码</label>
               <div class="controls">
-                <input type="text" id="set_identity">
+                <input type="text" id="set_identity" name="set_identity">
                 <span class="help-inline"></span>
               </div>
             </div>
@@ -113,9 +112,9 @@
               <label class="control-label" for="inputInfo">证件复印件</label>
               <div class="controls">
                 <div class="input-append file_area">
-				  <input type="text" id="card_file" readonly="true">
+				  <input type="text" id="card_file" readonly="true" name="card_file">
 				  <button class="btn" type="button" id="card_upload">上传</button>
-				  <input width="50px" type="file" accept="text/plain" class="file" onchange="return window.document.getElementById('card_file').value=this.value" name="file">
+				  <input width="50px" type="file" accept="image/*" class="file" onchange="return window.document.getElementById('card_file').value=this.value" name="file">
 				</div>
               </div>
             </div>
@@ -129,7 +128,7 @@
             </div>
 			<div class="control-group">
               <div class="controls">
-               <button class="btn btn-large btn-primary btn-danger" type="button">立即注册</button>		
+               <button class="btn btn-large btn-primary btn-danger" type="submit" id="run">立即注册</button>		
               </div>
             </div>
 			
@@ -214,6 +213,7 @@
 	<script type="text/javascript" src="javascripts/bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="javascripts/gallery/base/1.0.0/base.js"></script>
 	<script type="text/javascript" src="javascripts/gallery/ajax/1.0.0/ajax.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/md5/1.0.0/md5.js"></script>
 	<script type="text/javascript" src="javascripts/app/register/1.0.0/register.js"></script>
 	<script type="text/javascript" src="javascripts/app/login/1.0.0/login.js"></script>
   </body>

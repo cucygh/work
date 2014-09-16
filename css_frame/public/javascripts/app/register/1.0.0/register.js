@@ -16,8 +16,31 @@
 	 * 定义页面空间
 	 */
 	Q.pages = Q.pages || {};
-	// 是否
-	Q.pages.flag=false;
+
+	/**
+	 * 校验数据
+	 */
+	Q.pages.form_check = function () {
+		var flag=true;
+		var $item;
+		var options={
+			identity:$(':radio[name=identity]').val()
+		};
+		$('#form-rigister :text,#form-rigister :password').each(function (index, item) {
+			$item=$(item);
+			if($item.val()==''||$item.parents('.control-group').hasClass('error')){
+				flag=false;
+				return false;
+			}else{
+				if($item.attr('type')!='password'){
+				options[$item.attr('name')||$item.attr('id')]=$item.val();
+				}else{
+				options[$item.attr('name')||$item.attr('id')]=Q.md5.run($item.val());
+				}
+			}
+		});		
+		return flag?options:flag;
+	};
 	/**
 	 * 定义页面事件
 	 */
@@ -119,14 +142,32 @@
 				$self.siblings('span').html('');
 			}
 		});
-		
+
 		/**
-        * 注册类别切换
-        */
+		 * 注册类别切换
+		 */
 		$form.on('change', ':radio[name=identity]', function () {
 			var $self = $(this);
 			var $type = $self.parents('.controls').find(':checked');
-			$('#credential option').prop('disabled',true).filter('[val='+$type.val()+']').prop('disabled',false).prop('selected',true);
+			$('#credential option').prop('disabled', true).filter('[val=' + $type.val() + ']').prop('disabled', false).prop('selected', true);
+		});
+
+		/**
+		 * 提交注册按钮
+		 */
+		$form.on('click', '#run', function (e) {
+			e.preventDefault();
+			$form=$('#form-rigister');
+			var options=Q.pages.form_check();
+			if(options){
+				Q.ajax.post(Q.ajax.config.user_regist,options,function(success){
+					alert('success')
+				},function(err){
+					alert('error');				
+				})
+			}else{
+				alert('参数错误')
+			}
 		});
 
 	};
