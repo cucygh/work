@@ -4,7 +4,7 @@
  * @author  cuc_ygh@163.com
  * @version 1.0.0
  * @ignore  created in 2014-09-12
- * @ignore  depend Library jQuery, base.js
+ * @ignore  depend Library jQuery
  * @ignore  =====================================================================================
  */
 ;
