@@ -38,7 +38,7 @@
 	 * 交互公共接口配置
 	 */
 	Q.ajax.config = {
-		user_check : '/user/validateUserName.do/',
+		user_check : '/user/validateUserName.do',
 		user_login : '/user/login/',
 		user_regist : '/user/register.do'
 	}
