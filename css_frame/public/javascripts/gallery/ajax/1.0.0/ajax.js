@@ -39,7 +39,7 @@
 	 */
 	Q.ajax.config = {
 		user_check : '/user/validateUserName.do',
-		user_login : '/user/login/',
+		user_login : '/user/login.do',
 		user_regist : '/user/register.do'
 	}
 

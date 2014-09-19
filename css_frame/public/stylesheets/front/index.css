@@ -16,6 +16,7 @@ body{background:#eee;}
 .well.footer .breadcrumb a{color:#999;}
 .well.footer p{margin-bottom:2px;}
 /* login */
+.form-horizontal .control-group{margin-bottom:5px;height:50px;}
 .tab-pane .ms-tishi {font-size: 0.8em; color: #c5c1c1;}
 .container .row .login-out,#login-modal .login-out{width: 390px;background: #fff;border: 1px #afaaaa solid;padding: 0 0 20px; border-radius: 5px;}
 .tab-pane .ms-username {width: 50px;font-size: .8em;vertical-align: middle;}
@@ -27,9 +28,9 @@ body{background:#eee;}
 .login-out .ms-login-colse {padding: 5px 10px 0 0;font-size: 2em;}
 .login-out .tit-color {width: 100%;height: 30px;background: #CC3333; border-radius: 5px 5px 0 0;color: #fff;line-height: 30px;text-indent: 1em;font-weight: bolder;}
 .tab-pane .ms-denglu {background: #CC3333;color: #fff;}
-.tab-pane .ms-checkbox {margin: -15px 0 0 60px;font-size: .8em;}
+.tab-pane .ms-checkbox {margin: 0px 0 0 60px;font-size: .8em;}
 .tab-pane .controls .ms-forget {float: none;color: #3F79D0;line-height: 30px;}
-.tab-pane .ms-form-action {background: transparent;border: none;padding: 0 0 0 60px;}
+.tab-pane .ms-form-action {background: transparent;border: none;padding: 0 0 0 60px;margin: 10px 0 0 0;}
 .tab-pane .ms-zhuce {margin-left: 20px;font-size: .8em;}
 
 #login-modal{width:300px;margin:-120px 0 0 -150px;}

@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>注册</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- Bootstrap css file v2.2.1 -->
 	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/bootstrap.css">
-
+	
 	<!--[if lte IE 6]>
-	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/bootstrap-ie6.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap/bootstrap-ie6.css">
 	<![endif]-->
 	
-	<!--[if IE]>	
-	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/ie.css">
-	<![endif]-->
-
+	<!-- bsie additional css patch -->
+	<!-- <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/ie.css"> -->
+	
 	<link rel="stylesheet" href="stylesheets/front/index.css" />
-	
+
 	
   </head>
   <body>
 	<div class="navbar navbar-fixed-top header">
 		<div class="container">
-			<a href=""><img class="img_logo" src="images/kippt-logo-w.png" width="45" alt="logo"></a>
+			<a href=""><img class="img_logo" src="images/kippt-logo-w.png" width="45" height="45" alt="logo"></a>
 			<a href="#" data-toggle="modal" data-target="#login-modal" class="login pull-right">登录</a>
 			<span class="divider pull-right">|</span>
 			<a href="#" class="rigister pull-right">注册</a>
 		</div>
 	</div>
+	<iframe src="" frameborder="0" class="hide" id="frame_rigister" name="frame_rigister"></iframe>
 	<div class="container body">
-		<form id="form-rigister" class="bs-docs-example form-horizontal form-register" enctype="multipart/form-data" action="/user/register.do" method="POST">
-            <div class="control-group">
+		<form id="form-rigister" target="frame_rigister" class="bs-docs-example form-horizontal form-register" enctype="multipart/form-data" action="/user/register.do" method="POST">
+             <div class="control-group">
               <label class="control-label" for="inputWarning">注册类别</label>
               <div class="controls">
                 <label class="radio inline">
@@ -44,7 +45,7 @@
 			<div class="control-group">
               <label class="control-label" for="set_user">用户名</label>
               <div class="controls">
-                <input type="text" id="set_user" name="set_user">
+                <input type="text" autocomplete="off" id="set_user" name="set_user">
                 <span class="help-inline"></span>
               </div>
             </div>
@@ -72,21 +73,21 @@
 			<div class="control-group">
               <label class="control-label" for="set_mobile">联系电话</label>
               <div class="controls">
-                <input type="text" id="set_mobile" name="set_mobile">				
+                <input type="text" autocomplete="off" id="set_mobile" name="set_mobile">				
                 <span class="help-inline"></span>
               </div>
             </div>
 			<div class="control-group">
               <label class="control-label" for="set_email">邮箱</label>
               <div class="controls">
-                <input type="text" id="set_email" name="set_email">				
+                <input type="text" autocomplete="off" id="set_email" name="set_email">				
                 <span class="help-inline"></span>
               </div>
             </div>
 			<div class="control-group">
               <label class="control-label" for="real_name">真实姓名</label>
               <div class="controls">
-                <input type="text" id="real_name" name="real_name">
+                <input type="text" autocomplete="off" id="real_name" name="real_name">
                 <span class="help-inline"></span>
               </div>
             </div>
@@ -103,7 +104,7 @@
             <div class="control-group">
               <label class="control-label" for="set_identity">证件号码</label>
               <div class="controls">
-                <input type="text" id="set_identity" name="set_identity">
+                <input type="text" autocomplete="off" id="set_identity" name="set_identity">
                 <span class="help-inline"></span>
               </div>
             </div>
@@ -111,7 +112,7 @@
               <label class="control-label" for="inputInfo">证件复印件</label>
               <div class="controls">
                 <div class="input-append file_area">
-				  <input type="text" id="card_file" readonly="true" name="card_file">
+				  <input type="text" autocomplete="off" id="card_file" readonly="true" name="card_file">
 				  <button class="btn" type="button" id="card_upload">上传</button>
 				  <input width="50px" type="file" accept="image/*" class="file" onchange="return window.document.getElementById('card_file').value=this.value" name="file">
 				</div>
@@ -120,7 +121,7 @@
 			<div class="control-group">
               <div class="controls">
                 <label class="checkbox">
-				  <input type="checkbox" value="">
+				  <input type="checkbox" checked="checked" id="agree">
 				  我已阅读并同意 <a href="#">《思维注册协议》</a>
 				</label>				
               </div>
@@ -159,23 +160,19 @@
 						<div class="control-group">
 							<label class="control-label ms-username" for="login">用户名：</label>
 							<div class="controls ms-control">
-								<input type="text"  placeholder="用户名">
+								<input type="text" autocomplete="off"  placeholder="用户名" id="login_name">
 								<a href="#" class="help-inline ms-forget">忘记账号？</a>
+								<p class="text-error ms-tishi"></p>
 							</div>
-							<p class="text-error ms-tishi"><i class="icon-exclamation-sign hide"></i></p>
 						</div>
 						<div class="control-group">
 							<label class="control-label ms-username" for="login">密码：</label>
 							<div class="controls ms-control">
-								<input type="text"  placeholder="密码">
+								<input type="password" autocomplete="off"  placeholder="密码" id="login_pwd">
 								<a href="#" class="help-inline ms-forget">忘记密码？</a>
+								<p class="text-error ms-tishi"></p>
 							</div>
-							<p class="text-error ms-tishi"><i class="icon-exclamation-sign hide"></i></p>
-						</div>
-						
-						<label class="checkbox ms-checkbox">
-							<input type="checkbox"> 下次自动登录(公共场合慎用)
-						</label>
+						</div>					
 						
 						<div class="form-actions ms-form-action">
 							<button type="submit" class="btn ms-denglu">登 录</button>
@@ -189,7 +186,6 @@
 			</div>
 		</div>
 	</div>
-	
 
 	
 	
