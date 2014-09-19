@@ -23,7 +23,7 @@
 		$.ajax({
 			url : url,
 			type : 'POST',
-			dataType : 'json',
+			dataType : url.charAt(0)=='/'?'json':'jsonp',
 			data : option,
 			success : function (res) {
 				callback && callback.call(null, res);

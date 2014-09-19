@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit" /> 
+	<title>服务器端接口调试自定义管理</title>
+	<!-- Bootstrap css file v2.2.1 -->
+	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/bootstrap.css">
+
+	<!--[if lte IE 6]>
+	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/bootstrap-ie6.css">
+	<![endif]-->
+	
+	<!--[if IE]>	
+	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/ie.css">
+	<![endif]-->
+
+	<link rel="stylesheet" href="stylesheets/front/testAPI.css" />
+	<link rel="stylesheet" href="stylesheets/gallery/json_format/1.0.0/s.css" />
+	
+</head>
+<body>
+	<div class="navbar navbar-fixed-top header">
+		<div class="container">
+			<h4 class="title">服务器端接口调试自定义管理</h4>
+		</div>
+	</div>
+	
+	<div class="container body">
+		<div class="span6">
+			<form class="form-horizontal">
+			  <div class="control-group">
+				<label class="control-label" for="server">服务器地址</label>
+				<div class="controls">
+				  <input type="text" id="server" placeholder="服务器地址">
+				  <span class="help-block">例：http://123.35.56.67:8080</span>
+				</div>
+			  </div>			  
+			  
+			  <div class="control-group">
+				<label class="control-label" for="api">接口地址</label>
+				<div class="controls">
+				  <input type="text" id="api" placeholder="接口地址">
+				  <span class="help-block">例：/user/register.do，必选项</span>
+				</div>
+			  </div>
+			  
+			  <div class="control-group">
+				<label class="control-label" for="param-name">参数保存名称</label>
+				<div class="controls">
+				  <input type="text" id="param-name" placeholder="参数保存名称">
+				  <span class="help-block">例：register-name，必选项</span>
+				</div>
+			  </div>
+			  
+			  
+			   <div class="control-group">
+				<label class="control-label" for="param">请求参数设置</label>
+				<div class="controls">
+					<textarea rows="8" id="param"></textarea>
+				  <span class="help-block">可以在历史接口地址设置当前</span>
+				</div>
+			  </div>
+			  
+			  
+			  <div class="control-group">
+				<div class="controls">
+				  <button type="button" class="btn btn-info run">执行</button>
+				</div>
+			  </div>
+			</form>	
+		</div>
+		<div class="span5">
+			<form class="form-horizontal">
+			  <div class="control-group">
+				<label class="control-label" for="his-server">历史服务器地址</label>
+				<div class="controls">
+				 <select id="his-server">
+				  <option>/</option>
+				</select>
+				  <span class="help-block">可以在历史服务器地址设置当前</span>
+				</div>
+			  </div>
+			  
+			 			  
+			  <div class="control-group">
+				<label class="control-label" for="his-api">历史接口地址</label>
+				<div class="controls">
+				 <select id="his-api">
+				  <option>/user/register.do</option>
+				  <option>/user/checkName.do</option>
+				</select>
+				  <span class="help-block">可以在历史接口地址设置当前</span>
+				</div>
+			  </div>
+			  
+			  
+			  <div class="control-group">
+				<label class="control-label" for="res-param">服务器响应</label>
+				<div class="controls">
+					<textarea rows="8" id="res-param"></textarea>
+				  <span class="help-block">可以在历史接口地址设置当前</span>
+				</div>
+			  </div>
+			  
+			  <div class="control-group">
+				<div class="controls">				 
+				  <button type="button" class="btn btn-primary format">格式化</button>
+				  <button type="button" class="btn btn-danger clear-all">清空记录</button>
+				</div>
+			  </div>
+			</form>	
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="well hide" id="json-formated">
+		  ...
+		</div>
+	</div>
+	
+	
+	
+	<script type="text/javascript" src="javascripts/jquery/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="javascripts/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/base/1.0.0/base.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/ajax/1.0.0/ajax.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/md5/1.0.0/md5.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/store/1.0.0/store.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/json_format/1.0.0/c.js"></script>
+	<script type="text/javascript" src="javascripts/app/testAPI/1.0.0/testAPI.js"></script>
+</body>
+</html>
