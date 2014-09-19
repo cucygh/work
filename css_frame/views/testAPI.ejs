@@ -50,7 +50,7 @@
 				<label class="control-label" for="param-name">参数保存名称</label>
 				<div class="controls">
 				  <input type="text" id="param-name" placeholder="参数保存名称">
-				  <span class="help-block">例：register-name，必选项</span>
+				  <span class="help-block">例：register-name，可忽略</span>
 				</div>
 			  </div>
 			  
@@ -92,6 +92,17 @@
 				  <option>/user/checkName.do</option>
 				</select>
 				  <span class="help-block">可以在历史接口地址设置当前</span>
+				</div>
+			  </div>
+			  
+			   <div class="control-group">
+				<label class="control-label" for="his-param-name">历史参数名称</label>
+				<div class="controls">
+				 <select id="his-param-name">
+				  <option>/user/register.do</option>
+				  <option>/user/checkName.do</option>
+				</select>
+				  <span class="help-block">可以在历史参数设置当前</span>
 				</div>
 			  </div>
 			  

@@ -87,9 +87,13 @@
 				if (url) {
 					Q.pages.save('his-api', url);
 				}
+				if(param){
+					Q.pages.save('his-param-name', JSON.stringify(param));
+				}
 				$('#res-param').val(JSON.stringify(res));
 				Q.pages.get('his-api');
 				Q.pages.get('his-server');
+				Q.pages.get('his-param-name');
 			}, function (err) {
 				alert('网络错误');
 			})
@@ -115,6 +119,17 @@
 		});
 
 		/**
+		 * 选择历史参数
+		 */
+		$body.on('click', '#his-param-name', function (e) {
+			var url = $(this).val();
+			if (url) {
+				$('#param').val(url);
+			}
+		});
+
+		
+		/**
 		 * 清空记录
 		 */
 		$body.on('click', '.clear-all', function (e) {
@@ -122,6 +137,7 @@
 			Q.pages.get('his-api');
 			Q.pages.get('his-server');
 		});
+		
 		/**
 		 * 格式化JSON
 		 */
@@ -139,6 +155,7 @@
 		Q.pages.event();
 		Q.pages.get('his-server');
 		Q.pages.get('his-api');
+		Q.pages.get('his-param-name');
 	});
 
 })(window);
