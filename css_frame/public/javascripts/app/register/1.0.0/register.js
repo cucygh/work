@@ -21,31 +21,52 @@
 	 * 校验数据
 	 */
 	Q.pages.form_check = function () {
-		var flag=true;
+		var flag = true;
 		var $item;
-		var options={
-			identity:$(':radio[name=identity]').val()
-		};
 		$('#form-rigister :text,#form-rigister :password').each(function (index, item) {
-			$item=$(item);
-			if($item.val()==''||$item.parents('.control-group').hasClass('error')){
-				flag=false;
+			$item = $(item);
+			if ($item.val() == '' || $item.parents('.control-group').hasClass('error')) {
+				flag = false;
 				return false;
-			}else{
-				if($item.attr('type')!='password'){
-				options[$item.attr('name')||$item.attr('id')]=$item.val();
-				}else{
-				options[$item.attr('name')||$item.attr('id')]=Q.md5.run($item.val());
-				}
 			}
-		});		
-		return flag?options:flag;
+		});
+		return flag;
 	};
 	/**
 	 * 定义页面事件
 	 */
 	Q.pages.event = function () {
 		var $form = $('.form-register');
+
+		/**
+		 * 用户名是否被占用
+		 */
+		$form.on('blur', '#set_user', function () {
+			var $self = $(this);
+			var name = $.trim($self.val());
+			if (name != '') {
+				$self.siblings('span').html('');
+				$self.parents('.control-group').removeClass('error');
+				Q.ajax.post(Q.ajax.config.user_check, {
+					UserName : name
+				}, function (res) {
+					if (res.returncode == "1") {
+						$self.siblings('span').html('<i class="icon-remove"></i> 用户名已被占用！');
+						$self.parents('.control-group').addClass('error');
+					} else {
+						$self.siblings('span').html('<i class="icon-add"></i> 用户名已被占用！');
+						$self.parents('.control-group').removeClass('error');
+					}
+				}, function (err) {
+					$self.siblings('span').html('<i class="icon-remove"></i> 网络错误！');
+					$self.parents('.control-group').addClass('error');
+				});
+			} else {
+				$self.siblings('span').html('<i class="icon-remove"></i> 用户名不能为空！');
+				$self.parents('.control-group').addClass('error');
+			}
+		});
+
 		/**
 		 * 密码强度验证
 		 */
@@ -157,16 +178,23 @@
 		 */
 		$form.on('click', '#run', function (e) {
 			e.preventDefault();
-			$form=$('#form-rigister');
-			var options=Q.pages.form_check();
-			if(options){
-				Q.ajax.post(Q.ajax.config.user_regist,options,function(success){
-					alert('success')
-				},function(err){
-					alert('error');				
-				})
-			}else{
-				alert('参数错误')
+			$form = $('#form-rigister');
+			var checked = Q.pages.form_check();
+			var $pwd;
+			if (checked) {
+				// 密码加密
+				$pwd = $('#set_pwd');
+				$pwd.val(Q.md5.run($pwd.val()));
+				$pwd = $('#repeat_pwd');
+				$pwd.val(Q.md5.run($pwd.val()));
+
+			}
+			if (Q.pages.form_check()) {
+				$form.get(0).submit();
+				setTimeout(function () {
+					$('#set_pwd').val('');
+					$('#repeat_pwd').val('');
+				}, 500);
 			}
 		});
 
