@@ -18,6 +18,8 @@
 
 	<link rel="stylesheet" href="stylesheets/front/testAPI.css" />
 	<link rel="stylesheet" href="stylesheets/gallery/json_format/1.0.0/s.css" />
+
+	
 	
 </head>
 <body>
@@ -63,6 +65,17 @@
 				</div>
 			  </div>
 			  
+			   <div class="control-group">
+				<label class="control-label" for="file-upload">上传文件</label>
+				<iframe src="" frameborder="0" name="ifile" id="ifile"></iframe>
+				<div class="controls">
+				  <form action="/upload" method="POST" target="ifile" enctype="multipart/form-data">
+					<input type="file" id="file-upload" placeholder="参数保存名称">
+					<button type="submit" class="btn btn-large">上传</button>
+				  </form>
+				 
+				</div>
+			  </div>
 			  
 			  <div class="control-group">
 				<div class="controls">
@@ -140,6 +153,11 @@
 	<script type="text/javascript" src="javascripts/gallery/md5/1.0.0/md5.js"></script>
 	<script type="text/javascript" src="javascripts/gallery/store/1.0.0/store.js"></script>
 	<script type="text/javascript" src="javascripts/gallery/json_format/1.0.0/c.js"></script>
+	
+	<script type="text/javascript" src="javascripts/gallery/upload/1.0.0/ajaxfileupload.js"></script>
+	
+	
+	
 	<script type="text/javascript" src="javascripts/app/testAPI/1.0.0/testAPI.js"></script>
 </body>
 </html>

@@ -87,7 +87,7 @@
 				if (url) {
 					Q.pages.save('his-api', url);
 				}
-				if(param){
+				if (param) {
 					Q.pages.save('his-param-name', JSON.stringify(param));
 				}
 				$('#res-param').val(JSON.stringify(res));
@@ -128,7 +128,6 @@
 			}
 		});
 
-		
 		/**
 		 * 清空记录
 		 */
@@ -137,13 +136,34 @@
 			Q.pages.get('his-api');
 			Q.pages.get('his-server');
 		});
-		
+
 		/**
 		 * 格式化JSON
 		 */
 		$body.on('click', '.format', function (e) {
 			Process();
 			$('#json-formated').show();
+		});
+
+		/**
+		 * 上传文件
+		 */
+		$body.on('click', '.start-upload', function (e) {
+			$.ajaxFileUpload({
+				url : '/upload',
+				secureuri : false,
+				fileElementId : 'file-upload',
+				dataType : 'json',
+				success : function (data, status) {
+					if (typeof(data.error) != 'undefined') {
+						if (data.error != '') {
+							alert(data.error);
+						} else {
+							alert(data.msg);
+						}
+					}
+				}
+			});
 		});
 
 	}

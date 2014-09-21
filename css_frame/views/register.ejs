@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>注册</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Bootstrap css file v2.2.1 -->
+	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/bootstrap.css">
+	
+	<!--[if lte IE 6]>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap/bootstrap-ie6.css">
+	<![endif]-->
+	
+	<!-- bsie additional css patch -->
+	<!-- <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/ie.css"> -->
+	
+	<link rel="stylesheet" href="stylesheets/front/index.css" />
+
+	
+  </head>
+  <body>
+	<div class="navbar navbar-fixed-top header">
+		<div class="container">
+			<a href=""><img class="img_logo" src="images/kippt-logo-w.png" width="45" height="45" alt="logo"></a>
+			<a href="#" data-toggle="modal" data-target="#login-modal" class="login pull-right">登录</a>
+			<span class="divider pull-right">|</span>
+			<a href="#" class="rigister pull-right">注册</a>
+		</div>
+	</div>
+	<iframe src="" frameborder="0" class="hide" id="frame_rigister" name="frame_rigister"></iframe>
+	<div class="container body">
+		<form id="form-rigister" target="frame_rigister" class="bs-docs-example form-horizontal form-register" enctype="multipart/form-data" action="/user/register.do" method="POST">
+             <div class="control-group">
+              <label class="control-label" for="inputWarning">注册类别</label>
+              <div class="controls">
+                <label class="radio inline">
+				  <input type="radio" name="identity" value="card" checked>
+				  个 人
+				</label>
+				<label class="radio inline">
+				  <input type="radio" name="identity" value="registr">
+				 团 体
+				</label>
+              </div>
+            </div>
+			<div class="control-group">
+              <label class="control-label" for="set_user">用户名</label>
+              <div class="controls">
+                <input type="text" autocomplete="off" id="set_user" name="set_user">
+                <span class="help-inline"></span>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="set_pwd">密  码</label>
+              <div class="controls">
+                <input type="password" id="set_pwd" name="set_pwd">
+                <span class="help-inline"></span>
+				</br>
+				<div class="btn-group">
+				  <button class="btn pwd-level" disabled></button>
+				  <button class="btn pwd-level" disabled></button>
+				  <button class="btn pwd-level" disabled></button>			 
+				  <button class="btn pwd-level" disabled></button>			 
+				</div>
+              </div>
+            </div>
+			<div class="control-group">
+              <label class="control-label" for="repeat_pwd">确认密码</label>
+              <div class="controls">
+                <input type="password" id="repeat_pwd" name="repeat_pwd">				
+                <span class="help-inline"></span>
+              </div>
+            </div>
+			<div class="control-group">
+              <label class="control-label" for="set_mobile">联系电话</label>
+              <div class="controls">
+                <input type="text" autocomplete="off" id="set_mobile" name="set_mobile">				
+                <span class="help-inline"></span>
+              </div>
+            </div>
+			<div class="control-group">
+              <label class="control-label" for="set_email">邮箱</label>
+              <div class="controls">
+                <input type="text" autocomplete="off" id="set_email" name="set_email">				
+                <span class="help-inline"></span>
+              </div>
+            </div>
+			<div class="control-group">
+              <label class="control-label" for="real_name">真实姓名</label>
+              <div class="controls">
+                <input type="text" autocomplete="off" id="real_name" name="real_name">
+                <span class="help-inline"></span>
+              </div>
+            </div>
+			
+            <div class="control-group">
+              <label class="control-label" for="inputError">证件类型</label>
+              <div class="controls">
+                <select id="credential">
+				  <option val="card">身份证</option>
+				  <option val="registr" disabled="disabled">营业执照</option>				
+				</select>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="set_identity">证件号码</label>
+              <div class="controls">
+                <input type="text" autocomplete="off" id="set_identity" name="set_identity">
+                <span class="help-inline"></span>
+              </div>
+            </div>
+			<div class="control-group">
+              <label class="control-label" for="inputInfo">证件复印件</label>
+              <div class="controls">
+                <div class="input-append file_area">
+				  <input type="text" autocomplete="off" id="card_file" readonly="true" name="card_file">
+				  <button class="btn" type="button" id="card_upload">上传</button>
+				  <input width="50px" type="file" accept="image/*" class="file" onchange="return window.document.getElementById('card_file').value=this.value" name="file">
+				</div>
+              </div>
+            </div>
+			<div class="control-group">
+              <div class="controls">
+                <label class="checkbox">
+				  <input type="checkbox" checked="checked" id="agree">
+				  我已阅读并同意 <a href="#">《思维注册协议》</a>
+				</label>				
+              </div>
+            </div>
+			<div class="control-group">
+              <div class="controls">
+               <button class="btn btn-large btn-primary btn-danger" type="button" id="run">立即注册</button>		
+              </div>
+            </div>
+			
+			
+          </form>
+	</div>
+	
+	<div class="well well-large footer">
+		<div class="container">
+			<ul class="breadcrumb">
+			  <li><a href="#">关于我们</a><span class="divider">|</span></li>
+			  <li><a href="#">联系我们</a><span class="divider">|</span></li>
+			  <li><a href="#">客户服务</a><span class="divider">|</span></li>
+			  <li><a href="#">法律声明和隐私条款</a></li>
+			</ul>
+			<p class="muted"><span>Copyright &copy; 2012-2013 Cblink. All Rights Reserved.</span></p>
+			<p class="muted"><span class="">中国数字版权有限公司｜京ICP备12044750号-2 </span></p>
+		</div>
+	</div>
+	
+	<!-- 登录窗口 -->
+	<div class="modal hide fade" id="login-modal" data-login>
+		  <div class="login-out">				
+			<button type="button" class="close ms-login-colse">×</button>
+			<div class="tit-color">账号登录</div>
+			<div class="tabbable ms-loginwrap">					
+				<div class="tab-content ms-personal">				
+					<div class="tab-pane active form-horizontal" id="tab1">
+						<div class="control-group">
+							<label class="control-label ms-username" for="login">用户名：</label>
+							<div class="controls ms-control">
+								<input type="text" autocomplete="off"  placeholder="用户名" id="login_name">
+								<a href="#" class="help-inline ms-forget">忘记账号？</a>
+								<p class="text-error ms-tishi"></p>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label ms-username" for="login">密码：</label>
+							<div class="controls ms-control">
+								<input type="password" autocomplete="off"  placeholder="密码" id="login_pwd">
+								<a href="#" class="help-inline ms-forget">忘记密码？</a>
+								<p class="text-error ms-tishi"></p>
+							</div>
+						</div>					
+						
+						<div class="form-actions ms-form-action">
+							<button type="submit" class="btn ms-denglu">登 录</button>
+							<a hrsf="#" class="ms-zhuce">注册新账号</a>
+						</div>
+						
+	
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- 登录窗口 -->
+	
+	
+	
+	<script type="text/javascript" src="javascripts/jquery/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="javascripts/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/base/1.0.0/base.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/ajax/1.0.0/ajax.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/md5/1.0.0/md5.js"></script>
+	<script type="text/javascript" src="javascripts/app/register/1.0.0/register.js"></script>
+	<script type="text/javascript" src="javascripts/app/login/1.0.0/login.js"></script>
+  </body>
+</html>
