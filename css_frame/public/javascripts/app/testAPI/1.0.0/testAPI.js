@@ -144,28 +144,29 @@
 			Process();
 			$('#json-formated').show();
 		});
-
 		/**
 		 * 上传文件
 		 */
 		$body.on('click', '.start-upload', function (e) {
-			$.ajaxFileUpload({
-				url : '/upload',
-				secureuri : false,
-				fileElementId : 'file-upload',
-				dataType : 'json',
-				success : function (data, status) {
-					if (typeof(data.error) != 'undefined') {
-						if (data.error != '') {
-							alert(data.error);
-						} else {
-							alert(data.msg);
-						}
-					}
-				}
-			});
+			$('#file_upload').uploadify('upload');
 		});
 
+		/**
+		 * 上传文件
+		 */
+		$('#file_upload').uploadify({
+			'swf' : 'javascripts/gallery/upload/1.0.0/uploadify.swf',
+			'uploader' : '/upload',
+			// Put your options here
+			auto : false,
+			buttonText : '上传文件',
+			formData : {
+				'name' : '第一次心',
+				'time' : '2014-09-19'
+			}
+		});
+		
+		
 	}
 
 	/**

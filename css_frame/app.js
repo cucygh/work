@@ -20,6 +20,7 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
+app.use(express.bodyParser({ keepExtensions: true, uploadDir: './files' }));
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -35,9 +36,11 @@ app.get('/users', user.list);
 app.post('/ask', routes.ask);
 app.post('/get', routes.ygh);
 app.post('/upload', function (req, res) {
+	console.log(req.files);
 	res.json({
 		ygh : 'nothing',
-		file: req.files||'none'
+		file: req.files||'none',
+		body:req.body
 	})
 
 });

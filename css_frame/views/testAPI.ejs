@@ -18,7 +18,8 @@
 
 	<link rel="stylesheet" href="stylesheets/front/testAPI.css" />
 	<link rel="stylesheet" href="stylesheets/gallery/json_format/1.0.0/s.css" />
-
+	<link rel="stylesheet" href="stylesheets/gallery/upload/1.0.0/upload.css" />
+	
 	
 	
 </head>
@@ -65,24 +66,20 @@
 				</div>
 			  </div>
 			  
-			   <div class="control-group">
-				<label class="control-label" for="file-upload">上传文件</label>
-				<iframe src="" frameborder="0" name="ifile" id="ifile"></iframe>
+			 <div class="control-group">
+				<label class="control-label" for="param">文件上传</label>
 				<div class="controls">
-				  <form action="/upload" method="POST" target="ifile" enctype="multipart/form-data">
-					<input type="file" id="file-upload" placeholder="参数保存名称">
-					<button type="submit" class="btn btn-large">上传</button>
-				  </form>
-				 
+					<input type="file" name="file_upload" id="file_upload" />
+					 <input type="button" value="立即上传" class="start-upload"/>
 				</div>
-			  </div>
-			  
+			  </div>			  
+			 
 			  <div class="control-group">
 				<div class="controls">
 				  <button type="button" class="btn btn-info run">执行</button>
 				</div>
 			  </div>
-			</form>	
+			</form>
 		</div>
 		<div class="span5">
 			<form class="form-horizontal">
@@ -154,7 +151,7 @@
 	<script type="text/javascript" src="javascripts/gallery/store/1.0.0/store.js"></script>
 	<script type="text/javascript" src="javascripts/gallery/json_format/1.0.0/c.js"></script>
 	
-	<script type="text/javascript" src="javascripts/gallery/upload/1.0.0/ajaxfileupload.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/upload/1.0.0/jquery.uploadify.js"></script>
 	
 	
 	
