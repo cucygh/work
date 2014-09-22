@@ -162,30 +162,70 @@
 	<div id="upload-modal" class="modal hide fade">
 	  	 <div class="login-out">				
 			<button type="button" class="close ms-login-colse" data-dismiss="modal" aria-hidden="true">×</button>
-			<div class="tit-color">账号登录</div>
-			<div class="tabbable ms-loginwrap">					
-				<div class="tab-content ms-personal">				
+			<div class="tit-color">上传作品</div>
+			<div class="tabbable sc-wrap">					
+				<div class="tab-content sc">				
 					<div class="tab-pane active form-horizontal" id="tab1">
 						<div class="control-group">
-							<label class="control-label ms-username" for="login">用户名：</label>
-							<div class="controls ms-control">
-								<input type="text" autocomplete="off"  placeholder="用户名" id="login_name">
-								<a href="#" class="help-inline ms-forget">忘记账号？</a>
-								<p class="text-error ms-tishi"></p>
+							<label class="control-label sc-msg" for="login">名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</label>
+							<div class="controls sc-control">
+								<input type="text" autocomplete="off"  placeholder="名称" id="login_name">
+								<a href="#" class="help-inline ms-forget">名称重复</a>
 							</div>
 						</div>
 						<div class="control-group">
-							<label class="control-label ms-username" for="login">密码：</label>
-							<div class="controls ms-control">
-								<input type="password" autocomplete="off"  placeholder="密码" id="login_pwd">
-								<a href="#" class="help-inline ms-forget">忘记密码？</a>
-								<p class="text-error ms-tishi"></p>
+							<label class="control-label sc-msg" for="login">作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：</label>
+							<div class="controls sc-control">
+								<input type="text"  class="sc-author" autocomplete="off"  placeholder="作者" id="login_name">
+								<input type="checkbox">
 							</div>
 						</div>
+						<div class="control-group">
+							<label class="control-label sc-msg" for="login">分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类：</label>
+							<div class="controls sc-control">
+								<select name="zuopinfenlei" id="">
+									<option value="动漫卡通">动漫卡通</option>
+									<option value="动漫卡通">动漫卡通</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label sc-msg" for="login">标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签：</label>
+							<div class="controls sc-control">
+								<input type="text" autocomplete="off"  placeholder="标签">
+								<a href="#" class="help-inline ms-forget">标签重复</a>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label sc-msg" for="login">拍摄时间：</label>
+							<div class="controls sc-control">
+								<input type="date" autocomplete="off"  placeholder="拍摄时间">
+								<a href="#" class="help-inline ms-forget">请选择时间</a>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label sc-msg" for="login">拍摄地点：</label>
+							<div class="controls sc-control">
+								<input type="text" autocomplete="off"  placeholder="拍摄地点">
+								<a href="#" class="help-inline ms-forget">请填写拍摄时间</a>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label sc-msg" for="login">描&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;述：</label>
+							<div class="controls sc-control">
+								<textarea autocomplete="off"  placeholder="描述"></textarea>
+								<a href="#" class="help-inline ms-forget">请对作品做简单描述，50字内</a>
+							</div>
+						</div>
+							
+							
+							
+							
 						
-						<div class="form-actions ms-form-action">
-							<button type="submit" class="btn ms-denglu">登 录</button>
-							<a hrsf="#" class="ms-zhuce">注册新账号</a>
+						
+						
+						<div class="form-actions sc-tijiao">
+							<button type="submit" class="btn ms-denglu">上 传</button>
 						</div>	
 						
 					</div>
