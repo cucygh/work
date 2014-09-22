@@ -9,7 +9,7 @@
 
 /* banner */
 .banner .hero-unit{background:#fff;padding:60px 0;}
-.banner .hero-unit .copyright{margin-left:60px;}
+/* .banner .hero-unit .copyright{margin-left:60px;} */
 .banner .hero-unit .media-heading{color:#666;}
 .banner li{line-height:20px;list-style:none;}
 .banner a{color:#3f79d0;font-size:12px;}
@@ -32,7 +32,7 @@
 .pic-show .pic-content .pic-content-all .pic-item{float: left;width: 150px;margin-right: 28px;color: #666;}
 .pic-item .img{width:150px;height:150px;text-align:center;background:#eee;}
 .pic-item .img img{width:auto;height:150px;}
-.pic-item p{margin:0;color:#666;text-indent:2em;font-size:12px;}
+.pic-item p{margin:0;color:#666;text-indent:1em;font-size:12px;}
 .pic-scroll{position: relative;padding: 31px 0 35px;}
 .pic-scroll .mover-pre {position: absolute;left: 0;top: 50%;margin-top: -35px;}
 .pic-scroll .mover-next {position: absolute;right: 0;top: 50%;margin-top: -35px;}

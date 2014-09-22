@@ -156,7 +156,7 @@
 		 */
 		$('#file_upload').uploadify({
 			'swf' : 'javascripts/gallery/upload/1.0.0/uploadify.swf',
-			'uploader' : '/upload',
+			'uploader' : '/work/upload.do',
 			// Put your options here
 			auto : false,
 			buttonText : '上传文件',
