@@ -37,6 +37,18 @@ module.exports = function (grunt) {
 				]
 			}
 		},
+		copy : {
+			work : {
+				files : [{
+						expand : true,
+						src : ['public/images/*'],
+						dest : 'D:/project/ygh',
+						filter : 'isFile'
+					}
+				]
+			}
+		},
+		
 		concat : {
 			merge : {
 				files : {
@@ -61,5 +73,6 @@ module.exports = function (grunt) {
 
 	// 默认被执行的任务列表。
 	grunt.registerTask('default', ['clean:build', 'uglify:compileJS', 'cssmin:compileCSS', 'copy:main','concat:merge']);
+	grunt.registerTask('work', ['copy:work']);
 
 };

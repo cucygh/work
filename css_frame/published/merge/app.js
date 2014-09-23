@@ -4,7 +4,7 @@
  * @author  cuc_ygh@163.com
  * @version 1.0.0
  * @ignore  created in 2014-09-12
- * @ignore  depend Library jQuery, base.js
+ * @ignore  depend Library jQuery
  * @ignore  =====================================================================================
  */
 ;
@@ -23,7 +23,7 @@
 		$.ajax({
 			url : url,
 			type : 'POST',
-			dataType : 'json',
+			dataType : url.charAt(0)=='/'?'json':'jsonp',
 			data : option,
 			success : function (res) {
 				callback && callback.call(null, res);
@@ -38,9 +38,9 @@
 	 * 交互公共接口配置
 	 */
 	Q.ajax.config = {
-		user_check : '/user/check/',
-		login : '/user/login/',
-		user_regist : '/user/regist'
+		user_check : '/user/validateUserName.do',
+		user_login : '/user/login.do',
+		user_regist : '/user/register.do'
 	}
 
 	// 扩展pages
@@ -77,11 +77,60 @@
 			$self.parents('.modal[data-login]').modal('hide');
 		});
 
+		// 用户名，密码空检测
+		$modal.on('keyup blur', '#login_name,#login_pwd', function (e) {
+			var $self = $(this);
+			if ($self.val() != '') {
+				$self.parents('.control-group').find('.ms-tishi').html('');
+			}
+			if (e.type == 'blur') {
+				if ($self.val() != '') {
+					$self.parents('.control-group').find('.ms-tishi').html('');
+				} else {
+					$self.parents('.control-group').find('.ms-tishi').html('<i class="icon-remove"></i>用户名不能为空');
+				}
+			}
+		});
+
 		// 登录
-		$modal.on('click', '.close', function (e) {
+		$modal.on('click', '.ms-denglu', function (e) {
 			e.preventDefault();
 			var $self = $(this);
-			$self.parents('.modal[data-login]').modal('hide');
+			var $login_name = $('#login_name');
+			var $pwd = $('#login_pwd');
+			var options = {
+				name : $login_name.val(),
+				pwd : $pwd.val()
+			};
+			if (options.name == '') {
+				$login_name.parents('.control-group').find('.ms-tishi').html('<i class="icon-remove"></i>用户名不能为空');
+				return false;
+			} else {
+				$login_name.parents('.control-group').find('.ms-tishi').html('');
+			}
+			if (options.pwd == '') {
+				$pwd.parents('.control-group').find('.ms-tishi').html('<i class="icon-remove"></i>密码不能为空');
+				return false;
+			} else {
+				$pwd.parents('.control-group').find('.ms-tishi').html('');
+				options.pwd = Q.md5.run(options.pwd);
+			}
+			Q.ajax.post(Q.ajax.config.user_login, options, function (res) {
+				if (res.status == '0') {
+					Q.cookie.set({
+						name : 'syyGUID',
+						value : res.cookie,
+						expire : res.expire
+					})
+					$self.parents('.modal[data-login]').modal('hide');
+				}else{
+					$pwd.parents('.control-group').find('.ms-tishi').html('<i class="icon-remove"></i>'+res.error);				
+				}
+			}, function (err) {
+				alert('登录失败');
+				console.log(err);
+				// $self.parents('.modal[data-login]').modal('hide');
+			});
 		});
 
 	};
@@ -111,13 +160,57 @@
 	 * 定义页面空间
 	 */
 	Q.pages = Q.pages || {};
-	// 是否
-	Q.pages.flag=false;
+
+	/**
+	 * 校验数据
+	 */
+	Q.pages.form_check = function () {
+		var flag = true;
+		var $item;
+		$('#form-rigister :text,#form-rigister :password').each(function (index, item) {
+			$item = $(item);
+			if ($item.val() == '' || $item.parents('.control-group').hasClass('error')) {
+				flag = false;
+				return false;
+			}
+		});
+		return flag;
+	};
 	/**
 	 * 定义页面事件
 	 */
 	Q.pages.event = function () {
 		var $form = $('.form-register');
+
+		/**
+		 * 用户名是否被占用
+		 */
+		$form.on('blur', '#set_user', function () {
+			var $self = $(this);
+			var name = $.trim($self.val());
+			if (name != '') {
+				$self.siblings('span').html('');
+				$self.parents('.control-group').removeClass('error');
+				Q.ajax.post(Q.ajax.config.user_check, {
+					UserName : name
+				}, function (res) {
+					if (res.returncode == "1") {
+						$self.siblings('span').html('<i class="icon-remove"></i> 用户名已被占用！');
+						$self.parents('.control-group').addClass('error');
+					} else {
+						$self.siblings('span').html('<i class="icon-add"></i> 用户名已被占用！');
+						$self.parents('.control-group').removeClass('error');
+					}
+				}, function (err) {
+					$self.siblings('span').html('<i class="icon-remove"></i> 网络错误！');
+					$self.parents('.control-group').addClass('error');
+				});
+			} else {
+				$self.siblings('span').html('<i class="icon-remove"></i> 用户名不能为空！');
+				$self.parents('.control-group').addClass('error');
+			}
+		});
+
 		/**
 		 * 密码强度验证
 		 */
@@ -214,14 +307,39 @@
 				$self.siblings('span').html('');
 			}
 		});
-		
+
 		/**
-        * 注册类别切换
-        */
+		 * 注册类别切换
+		 */
 		$form.on('change', ':radio[name=identity]', function () {
 			var $self = $(this);
 			var $type = $self.parents('.controls').find(':checked');
-			$('#credential option').prop('disabled',true).filter('[val='+$type.val()+']').prop('disabled',false).prop('selected',true);
+			$('#credential option').prop('disabled', true).filter('[val=' + $type.val() + ']').prop('disabled', false).prop('selected', true);
+		});
+
+		/**
+		 * 提交注册按钮
+		 */
+		$form.on('click', '#run', function (e) {
+			e.preventDefault();
+			$form = $('#form-rigister');
+			var checked = Q.pages.form_check();
+			var $pwd;
+			if (checked) {
+				// 密码加密
+				$pwd = $('#set_pwd');
+				$pwd.val(Q.md5.run($pwd.val()));
+				$pwd = $('#repeat_pwd');
+				$pwd.val(Q.md5.run($pwd.val()));
+
+			}
+			if (Q.pages.form_check()) {
+				$form.get(0).submit();
+				setTimeout(function () {
+					$('#set_pwd').val('');
+					$('#repeat_pwd').val('');
+				}, 500);
+			}
 		});
 
 	};
