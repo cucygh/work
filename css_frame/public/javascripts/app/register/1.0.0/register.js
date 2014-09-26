@@ -16,7 +16,7 @@
 	 * 定义页面空间
 	 */
 	Q.pages = Q.pages || {};
-
+	Q.pages.param = {};
 	/**
 	 * 校验数据
 	 */
@@ -28,6 +28,12 @@
 			if ($item.val() == '' || $item.parents('.control-group').hasClass('error')) {
 				flag = false;
 				return false;
+			} else {
+				if ($item.attr('type') != 'password') {
+					Q.pages.param[$item.attr('name')] = $item.val();
+				} else {
+					Q.pages.param[$item.attr('name')] = Q.md5.run($item.val());
+				}
 			}
 		});
 		return flag;
@@ -172,6 +178,32 @@
 			var $type = $self.parents('.controls').find(':checked');
 			$('#credential option').prop('disabled', true).filter('[val=' + $type.val() + ']').prop('disabled', false).prop('selected', true);
 		});
+		/**
+		 * 文件上传
+		 */
+		$('#file').uploadify({
+			'fileTypeExts' : '*.gif; *.jpg; *.png',
+			// 'uploader' : '/upload',
+			'uploader' : Q.ajax.config.user_regist,
+			'swf' : '/www/javascripts/gallery/upload/1.0.0/uploadify.swf',
+			buttonText : '选择文件',
+			auto : false,
+			width : 220,
+			height : 30,
+			queueSizeLimit : 1,
+			fileObjName:'file',
+			formData : {},
+			'onUploadStart' : function (file) {
+				console.log(Q.pages.param);
+				$("#file").uploadify("settings", "formData", Q.pages.param);
+			},
+			onSelectError : function (file, errorCode, errorMsg) {
+				console.log('做多选择一张证件复印件，支持*.gif; *.jpg; *.png格式!');
+			},
+			'onUploadSuccess' : function (file, data, response) {
+				console.log('The file ' + file.name + ' was successfully uploaded with a response of ' + response + ':' + data);
+			}
+		});
 
 		/**
 		 * 提交注册按钮
@@ -182,20 +214,10 @@
 			var checked = Q.pages.form_check();
 			var $pwd;
 			if (checked) {
-				// 密码加密
-				$pwd = $('#set_pwd');
-				$pwd.val(Q.md5.run($pwd.val()));
-				$pwd = $('#repeat_pwd');
-				$pwd.val(Q.md5.run($pwd.val()));
-
+				$('#file').uploadify('upload')
 			}
-			if (Q.pages.form_check()) {
-				$form.get(0).submit();
-				setTimeout(function () {
-					$('#set_pwd').val('');
-					$('#repeat_pwd').val('');
-				}, 500);
-			}
+			
+			
 		});
 
 	};

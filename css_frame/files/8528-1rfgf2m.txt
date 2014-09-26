@@ -1,0 +1,23 @@
+﻿[yinguohui@openstack ~/caipiao/odds/src/www/2013/static/v1/js]$ cd ~/caipiao/
+[yinguohui@openstack ~/caipiao]$ svn ci -m 'add jcdata' odds/src/
+新增           odds/src/application/views/scripts/2013/header/jcdata-top.html
+新增           odds/src/application/views/scripts/2013/jcdata
+新增           odds/src/application/views/scripts/2013/jcdata/data.html
+新增           odds/src/www/2013/static/v1/css/jcdata
+新增           odds/src/www/2013/static/v1/css/jcdata/mod.jcdata.css
+新增           odds/src/www/2013/static/v1/img/jcdata
+新增 (二进制)  odds/src/www/2013/static/v1/img/jcdata/cp-logo-3.png
+新增 (二进制)  odds/src/www/2013/static/v1/img/jcdata/data-bodybg.png
+新增 (二进制)  odds/src/www/2013/static/v1/img/jcdata/data-foot.png
+新增 (二进制)  odds/src/www/2013/static/v1/img/jcdata/data-ico.png
+新增 (二进制)  odds/src/www/2013/static/v1/img/jcdata/img402x144.png
+新增 (二进制)  odds/src/www/2013/static/v1/img/jcdata/img64x64-2.png
+新增 (二进制)  odds/src/www/2013/static/v1/img/jcdata/img64x64.png
+新增 (二进制)  odds/src/www/2013/static/v1/img/jcdata/logo-mask-ie6.png
+新增 (二进制)  odds/src/www/2013/static/v1/img/jcdata/logo-mask.png
+新增 (二进制)  odds/src/www/2013/static/v1/img/jcdata/star-2.png
+新增 (二进制)  odds/src/www/2013/static/v1/img/jcdata/star.png
+新增           odds/src/www/2013/static/v1/js/jcdata
+新增           odds/src/www/2013/static/v1/js/jcdata/jcdata.js
+传输文件数据...............
+提交后的修订版为 41442。

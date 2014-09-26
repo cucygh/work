@@ -33,6 +33,7 @@ app.get('/', routes.index);
 app.get('/login', routes.login);
 app.get('/test', routes.testAPI);
 app.get('/personal', routes.personal);
+app.get('/register', routes.register);
 app.get('/users', user.list);
 app.post('/ask', routes.ask);
 app.post('/get', routes.ygh);

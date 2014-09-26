@@ -14,6 +14,7 @@
 	<!-- <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/ie.css"> -->
 	
 	<link rel="stylesheet" href="stylesheets/front/index.css" />
+	<link rel="stylesheet" href="stylesheets/gallery/upload/1.0.0/upload.css" />
 
 	
   </head>
@@ -111,10 +112,8 @@
 			<div class="control-group">
               <label class="control-label" for="inputInfo">证件复印件</label>
               <div class="controls">
-                <div class="input-append file_area">
-				  <input type="text" autocomplete="off" id="card_file" readonly="true" name="card_file">
-				  <button class="btn" type="button" id="card_upload">上传</button>
-				  <input width="50px" type="file" accept="image/*" class="file" onchange="return window.document.getElementById('card_file').value=this.value" name="file">
+                <div class="input-append file_area">				 
+				  <input width="50px" type="file" id="file" accept="image/*" class="file"  name="file">
 				</div>
               </div>
             </div>
@@ -177,26 +176,13 @@
 						<div class="form-actions ms-form-action">
 							<button type="submit" class="btn ms-denglu">登 录</button>
 							<a hrsf="#" class="ms-zhuce">注册新账号</a>
-						</div>
-						
-	
-						
+						</div>						
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -209,6 +195,7 @@
 	<script type="text/javascript" src="javascripts/gallery/base/1.0.0/base.js"></script>
 	<script type="text/javascript" src="javascripts/gallery/ajax/1.0.0/ajax.js"></script>
 	<script type="text/javascript" src="javascripts/gallery/md5/1.0.0/md5.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/upload/1.0.0/jquery.uploadify.js"></script>
 	<script type="text/javascript" src="javascripts/app/register/1.0.0/register.js"></script>
 	<script type="text/javascript" src="javascripts/app/login/1.0.0/login.js"></script>
   </body>

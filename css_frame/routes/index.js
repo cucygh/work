@@ -26,6 +26,12 @@ exports.personal = function (req, res) {
 		title : 'personal'
 	});
 };
+// ×¢²áÒ³Ãæ
+exports.register = function (req, res) {
+	res.render('register', {
+		title : 'register'
+	});
+};
 
 // ¿çÓò
 exports.ask = function (req, res) {
