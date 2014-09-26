@@ -181,7 +181,7 @@
 		/**
 		 * 文件上传
 		 */
-		$('#file').uploadify({
+		/* $('#file').uploadify({
 			'fileTypeExts' : '*.gif; *.jpg; *.png',
 			// 'uploader' : '/upload',
 			'uploader' : Q.ajax.config.user_regist,
@@ -203,7 +203,7 @@
 			'onUploadSuccess' : function (file, data, response) {
 				console.log('The file ' + file.name + ' was successfully uploaded with a response of ' + response + ':' + data);
 			}
-		});
+		}); */
 
 		/**
 		 * 提交注册按钮
@@ -214,12 +214,59 @@
 			var checked = Q.pages.form_check();
 			var $pwd;
 			if (checked) {
-				$('#file').uploadify('upload')
+				// $('#file').uploadify('upload')
 			}
 			
 			
 		});
-
+		
+		$('.pic-show').on('click', '.mover-next-ico', function (e) {
+			e.preventDefault();
+			var $container = $(this).parents('.pic-scroll').find('.pic-content-all');
+			var $ceil = $container.find('.pic-item');
+			var ceil_width = $ceil.width() + 30;
+			var roll_num = 6;
+			var i=0;
+			var scroll = function () {
+				var $first = $container.find('.pic-item:eq(0)');
+				$first.animate({
+					'margin-left' : ceil_width * -1
+				}, 50, 'linear', function () {
+					$container.find('.pic-item:last').after($first.clone().css('margin-left', 0));
+					$first.remove();
+					i++;
+					if(i<roll_num){
+						scroll();
+					}
+				});
+			}
+			scroll();
+		});
+		
+		// 合买定制滚屏翻页-向后翻
+		$('.pic-show').on('click', '.mover-pre-ico', function (e) {
+			e.preventDefault();
+			var $container = $(this).parents('.pic-scroll').find('.pic-content-all');
+			var $ceil = $container.find('.pic-item');
+			var ceil_width = $ceil.width() + 30;
+			var roll_num = 6;
+			var i=0;
+			var scroll = function () {
+				var $last = $container.find('.pic-item:last');
+				$container.find('.pic-item:first').before($last.clone().css('margin-left', ceil_width*-1));
+				$last.remove();
+				$container.find('.pic-item:first').animate({
+					'margin-left' : 0
+				}, 50, 'linear', function () {
+					i++;
+					if(i<roll_num){
+						scroll();
+					}
+				});
+			}
+			scroll();
+		});
+		
 	};
 	/**
 	 * 页面加载结束执行
