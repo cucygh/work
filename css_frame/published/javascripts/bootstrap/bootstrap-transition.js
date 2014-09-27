@@ -1,2 +1,0 @@
-/*! application-name 2014-09-23 */
-!function(a){"use strict";a(function(){a.support.transition=function(){var a=function(){var a,b=document.createElement("bootstrap"),c={WebkitTransition:"webkitTransitionEnd",MozTransition:"transitionend",OTransition:"oTransitionEnd otransitionend",transition:"transitionend"};for(a in c)if(void 0!==b.style[a])return c[a]}();return a&&{end:a}}()})}(window.jQuery);

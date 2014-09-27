@@ -1,2 +1,0 @@
-/*! application-name 2014-09-23 */
-!function(a){var b=a.jQuery,c=a.Q||{};c.pages=c.pages||{},c.pages.event=function(){var a=b(".form-register");a.on("blur","#set_user",function(){b(this)})},b(function(){c.pages.event()})}(window);
