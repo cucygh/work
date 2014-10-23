@@ -32,6 +32,13 @@ exports.register = function (req, res) {
 		title : 'register'
 	});
 };
+// ×¨ÌâÒ³Ãæ
+exports.special = function (req, res) {
+	res.render('special', {
+		title : 'register'
+	});
+};
+
 
 // ¿çÓò
 exports.ask = function (req, res) {

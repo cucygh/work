@@ -113,7 +113,7 @@
 			var logined=Q.cookie.get('syyGUID');
 			if(!logined){
 				var tpl='<div class="container">'+
-					'<a href=""><img class="img_logo" src="/www/images/kippt-logo-w.png" width="45" height="45" alt="logo"></a>'+
+					'<a href="#">hello word</a>'+
 					'<a href="#" data-toggle="modal" data-target="#login-modal" class="login pull-right">登录</a>'+
 					'<span class="divider pull-right">|</span>'+
 					'<a href="/register.jsp" class="rigister pull-right">注册</a>'+

@@ -6,7 +6,7 @@
 .header .divider{color:#fff;margin:0 0.5em;font-size:12px;opacity:0.5;}
 /* body */
 .container{width:1170px;}
-
+.main{margin:60px auto 0}
 /* banner */
 .banner .hero-unit{background:#fff;padding:60px 0;}
 /* .banner .hero-unit .copyright{margin-left:60px;} */
@@ -69,6 +69,24 @@
 #login-modal .ms-denglu{margin-left:0;}
 
 
-
-
+/* special */
+.top{padding:10px 0 15px 0;overflow:hidden;_zoom:1;margin:0 auto}
+.top .logo{float:left;position:relative;width:190px;height:72px}
+.top .logo .cs_num{position:absolute;right:20px;top:20px;color:#fff;font-size:14px;font-family:Arial,Helvetica,sans-serif}
+.picBigTitle{float:left;margin:0 0 0 21px;padding:12px 0 0 21px;border-left:1px solid #ddd;height:60px;font-size:22px;font-family:\5FAE\8F6F\96C5\9ED1;text-align:left}
+.picBigTitle span.date{display:inline-block;float:left;font-size:12px;margin:5px 0 0 0;color:#888;background:url(http://img1.cache.netease.com/f2e/ent/comicStrip/images/btns_v2.png) 0 -221px no-repeat;padding:0 0 0 21px;height:16px}
+.picBigTitle .titleInfo{font-size:12px;padding:5px 0 0 0;line-height:16px;}
+.actions{padding:20px 0 0 0}
+.titleInfo .vieworigin:hover{background-position:-147px 3px}
+.titleInfo .comment:hover{background-position:-147px -74px}
+.actions a{color:#333}
+.actions a:hover{color:#000;text-decoration:none}
+.titleInfo .vieworigin{background-position:13px 3px}
+.titleInfo .comment{background-position:13px -74px}
+.actions .share{background-position:13px -155px;padding-right:2px;cursor:pointer}
+.titleInfo .vieworigin,.titleInfo .comment,.actions .share,.actions .replay,.actions .photocenter{display:inline-block;float:left;height:25px;line-height:25px;padding:0 10px 0 37px;background-image:url(http://img1.cache.netease.com/f2e/ent/comicStrip/images/btns_v2.png);background-repeat:no-repeat;color:#252525}
+.titleInfo .comment span,.titleInfo .comment b{line-height:1}
+.titleInfo .comment span,.titleInfo .share span{color:#878787;font-family:Arial,sans-serif;font-weight:bold;font-style:italic;font-size:14px;margin:0}
+.titleInfo .comment b,.actions .share b{color:#b92635;font-size:16px;font-style:italic;font-weight:normal;font-family:Georgia,Arial,sans-serif}
+.actions .parting-line{float:left;height:22px;width:1px;font-size:0;background:#dadada}
 
