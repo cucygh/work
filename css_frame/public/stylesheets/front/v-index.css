@@ -6,7 +6,8 @@
 .header .divider{color:#fff;margin:0 0.5em;font-size:12px;opacity:0.5;}
 /* body */
 .container{width:1170px;}
-.main{margin:60px auto 0}
+.main{margin:60px auto 0;}
+/* body{background:#eee;} */
 /* banner */
 .banner .hero-unit{background:#fff;padding:60px 0;}
 /* .banner .hero-unit .copyright{margin-left:60px;} */
@@ -90,3 +91,4 @@
 .titleInfo .comment b,.actions .share b{color:#b92635;font-size:16px;font-style:italic;font-weight:normal;font-family:Georgia,Arial,sans-serif}
 .actions .parting-line{float:left;height:22px;width:1px;font-size:0;background:#dadada}
 
+.slider_back{margin-bottom:2em}

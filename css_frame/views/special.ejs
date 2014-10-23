@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="stylesheets/front/v-index.css" />
 	<link rel="stylesheet" href="stylesheets/front/normalize.css" />
 	<link rel="stylesheet" href="stylesheets/front/default.css" />
-	<link rel="stylesheet" href="stylesheets/front/ideal-image-slider.css" />
+	<link rel="stylesheet" href="stylesheets/front/amazingslider-1.css" />
 	<link rel="stylesheet" href="stylesheets/gallery/duoshuo/1.0.0/embed.default.css" />
 
 	
@@ -40,21 +40,50 @@
 			  <p class="titleInfo"><span class="date">2014-10-23 10:47:26</span> <a href="http://img6.cache.netease.com/photo/0003/2014-10-20/A90NVAJP54GS0003.jpg" target="_blank" hidefocus="true" class="vieworigin">原图</a><a href="http://comment.ent.163.com/photoview_bbs/PHOTGI5J000354GS.html" target="_blank" hidefocus="true" class="comment">评论 <span>( </span><b>38630</b><span> )</span></a></p>
 			</h2>
 		  </div>
-    </div>
-		<div id="slider">
-			<img src="/images/special/1.jpg" data-src-2x="/images/special/1@2x.jpg" title="Baloons" alt="This is the caption content" />
-			<img data-src="/images/special/2.jpg" data-src-2x="/images/special/2@2x.jpg" src="" title="Skateboard" alt="Captions <em>can</em> contain <strong>HTML</strong>" />
-			<img data-src="/images/special/3.jpg" data-src-2x="/images/special/3@2x.jpg" src="" alt="This will be overridden" data-caption="#caption-3" />
-			<img data-src="/images/special/4.jpg" data-src-2x="/images/special/4@2x.jpg" src="" title="A title without a caption" alt="" />
-			<img data-src="/images/special/3.jpg" data-src-2x="/images/special/4@2x.jpg" src="" title="Silly?" alt="A really really really really really really really really really really really really really really really really really really really really really really really really really long caption" />
 		</div>
-		 <div id="caption-3" style="display:none;">
-			<h3>External Caption</h3>
-			<p>When using <a href="#">HTML in captions</a> it might be better to use an external caption.</p>
+		<!-- 轮播图 -->
+		<div class="slider_back">
+			<!-- Insert to your webpage where you want to display the slider -->
+			<div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:1080px;padding-left:0px; padding-right:245px;margin:0px auto 0px;">
+				<div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+					<ul class="amazingslider-slides" style="display:none;">
+						<li><img src="/images/special/1.jpg" alt="青春的故事" data-description="万里无技术的房间啊啊靠近靠近靠近" />
+						</li>
+						<li><img src="/images/special/1@2x.jpg" alt="1@2x建丰街道卡积分卡就" data-description="立即靠近靠近靠近快乐健康" />
+						</li>
+						<li><img src="/images/special/2.jpg" alt="法打发" data-description="萨发法打发是打发" />
+						</li>
+						<li><img src="/images/special/2@2x.jpg" alt="斯洛伐克就啊看接口" data-description="分开打了卡夫卡接口费劲卡就" />
+						</li>
+						<li><img src="/images/special/3.jpg" alt="计分卡进口发动机啊坤敬府" data-description="是法打发法律纠纷的设计开发及" />
+						</li>
+						<li><img src="/images/special/3@2x.jpg" alt="附近的卡接口费劲打卡机分开垃圾" data-description="收费金卡进口发动机啊看凌凤街道卡拉" />
+						</li>
+						<li><img src="/images/special/4.jpg" alt="发动机是垃圾开放等级啊" data-description="发达数据库费劲啊看来大家发神经" />
+						</li>
+						<li><img src="/images/special/4@2x.jpg" alt="放大镜费劲啊" data-description="发生的金发科技啊口交的发卡量" />
+						</li>
+					</ul>
+					<ul class="amazingslider-thumbnails" style="display:none;">
+						<li><img src="/images/special/1-tn.jpg" alt="青春的故事" /></li>
+						<li><img src="/images/special/1@2x-tn.jpg" alt="1@2x建丰街道卡积分卡就" /></li>
+						<li><img src="/images/special/2-tn.jpg" alt="法打发" /></li>
+						<li><img src="/images/special/2@2x-tn.jpg" alt="斯洛伐克就啊看接口" /></li>
+						<li><img src="/images/special/3-tn.jpg" alt="计分卡进口发动机啊坤敬府" /></li>
+						<li><img src="/images/special/3@2x-tn.jpg" alt="附近的卡接口费劲打卡机分开垃圾" /></li>
+						<li><img src="/images/special/4-tn.jpg" alt="发动机是垃圾开放等级啊" /></li>
+						<li><img src="/images/special/4@2x-tn.jpg" alt="放大镜费劲啊" /></li>
+					</ul>
+				</div>
+			</div>
+			<!-- End of body section HTML codes -->		
 		</div>
-		<div class="container">
+		<!-- 轮播图end -->
+		<!-- 多说评论框 start -->
+		<div class="container duoshuo_back">
 			<div class="ds-thread" data-thread-key="special_01" data-title="聚焦90后网络女主播" data-url="http://localhost:3000/special"></div>
 		</div>
+		<!-- 多说评论框 end -->
 	</div>
 	
 	<!-- 底部 -->
@@ -109,22 +138,19 @@
 	
 	
 	
-	<!-- <script type="text/javascript" src="javascripts/jquery/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="javascripts/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="javascripts/jquery/jquery-1.7.2.min.js"></script>
+	<!-- <script type="text/javascript" src="javascripts/bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="javascripts/gallery/base/1.0.0/base.js"></script>
 	<script type="text/javascript" src="javascripts/gallery/ajax/1.0.0/ajax.js"></script>
 	<script type="text/javascript" src="javascripts/gallery/md5/1.0.0/md5.js"></script>
 	<script type="text/javascript" src="javascripts/app/register/1.0.0/register.js"></script>
 	<script type="text/javascript" src="javascripts/app/login/1.0.0/login.js"></script> -->
-	<script type="text/javascript" src="javascripts/app/special/1.0.0/ideal-image-slider.js"></script>
-	<script type="text/javascript" src="javascripts/app/special/1.0.0/iis-captions.js"></script>
+	<script type="text/javascript" src="javascripts/app/special/1.0.0/amazingslider.js"></script>
+	<script type="text/javascript" src="javascripts/app/special/1.0.0/initslider-1.js"></script>
 	<script type="text/javascript" src="javascripts/gallery/duoshuo/1.0.0/embed.js"></script>
 	<!-- <script type="text/javascript" src="javascripts/app/special/1.0.0/special.js"></script> -->
 	<script type="text/javascript">
-		var slider = new IdealImageSlider.Slider('#slider');
-		slider.addCaptions();
-		slider.start();
-		var duoshuoQuery = {short_name:"ygh"};
+	var duoshuoQuery = {short_name:"ygh"};
 	</script>
   </body>
 </html>
