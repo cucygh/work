@@ -10,7 +10,7 @@ jQuery(document).ready(function(){
         jsfolder:jsFolder,
         width:936,
         height:350,
-        skinsfoldername:"",
+        skinsfoldername:"/images/special/slider",
         loadimageondemand:false,
         isresponsive:false,
         autoplayvideo:false,

@@ -1616,6 +1616,7 @@ var ASPlatforms = {
 					width : this.options.bottomshadowimagewidth + "%",
 					height : "auto"
 				});
+				console.log(this.options.skinsfolder);
 				$shadow.html("<img src='" + this.options.skinsfolder + this.options.bottomshadowimage + "' style='display:block;position:relative;width:100%;height:auto;' />")
 			},
 			createBackgroundImage : function () {
@@ -3354,7 +3355,7 @@ var ASPlatforms = {
 				this.options.previewmode = amazingslider_previewmode;
 			this.options.htmlfolder = window.location.href.substr(0, window.location.href.lastIndexOf("/") + 1);
 			if (this.options.skinsfoldername.length > 0)
-				this.options.skinsfolder = this.options.jsfolder + this.options.skinsfoldername + "/";
+				this.options.skinsfolder = this.options.skinsfoldername + "/";
 			else
 				this.options.skinsfolder =
 					this.options.jsfolder;
