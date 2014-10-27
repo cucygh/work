@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>首页</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Bootstrap css file v2.2.1 -->
+	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/bootstrap.css">
+	
+	<!--[if lte IE 6]>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap/bootstrap-ie6.css">
+	<![endif]-->
+	
+	<!-- bsie additional css patch -->
+	<!-- <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/ie.css"> -->
+	
+	<link rel="stylesheet" href="stylesheets/front/notice.css" />
+
+
+	
+  </head>
+  <body>
+	<!-- 头部 -->
+	<div class="navbar navbar-fixed-top header">
+		<div class="container">
+			<a href="">yellow world</a>
+			<a href="#" data-toggle="modal" data-target="#login-modal" class="login pull-right">登录</a>
+			<span class="divider pull-right">|</span>
+			<a href="#" class="rigister pull-right">注册</a>
+		</div>
+	</div>
+	
+	<!-- 新闻主体 -->
+	<div class="notice">
+		<div class="container">
+			<div class="mbp">
+				<embed src="http://player.youku.com/player.php/sid/XMzIxMjU2OTY4/v.swf" allowfullscreen="true" quality="high" wmode="transparent" width="400" height="250" align="center" type="application/x-shockwave-flash">
+				<video controls="controls" preload="auto" width="400" height="250" class="webm" style="display: block;">
+					<source src="http://hbfile.b0.upaiyun.com/video/huaban_intro_720.webm" type="video/webm">
+				</video>
+				<video controls="controls" preload="auto" width="400" height="250" class="mp4">
+					<source src="http://hbfile.b0.upaiyun.com/video/huaban_intro_720.mp4" type="video/mp4">
+				</video>
+				<div class="video-cover" style="display: none;"></div>
+				<div class="title"></div>
+				<div class="sub-title"></div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 列表 -->
+	<div class="container">
+		<ul class="list-author">
+			<li>
+				<div class="list-sub-top">
+					<a class="inimg" href="http://www.boxui.com/website/20732.html" title="AYR-Bonobos旗下女性独立服装品牌-极致的细节处理" target="_blank">
+						<img alt="AYR-Bonobos旗下女性独立服装品牌-极致的细节处理" width="285" height="140" src="http://www.boxui.com/blog/wp-content/uploads/2014/10/0445264a3-boxuiW285boxuiH140.jpg">
+					</a>
+					<div class="list-sub-title">
+						<h4>基地王</h4>
+						<p>过去的历史</p>
+					</div>
+				</div>
+				<div class="list-sub-author">
+					<p>过客</p>
+				</div>
+			</li>
+			<li>
+				<a class="inimg" href="http://www.boxui.com/website/20732.html" title="AYR-Bonobos旗下女性独立服装品牌-极致的细节处理" target="_blank">
+					<img alt="AYR-Bonobos旗下女性独立服装品牌-极致的细节处理" width="285" height="140" src="http://www.boxui.com/blog/wp-content/uploads/2014/09/0618559Je-boxuiW285boxuiH320.jpg">
+				</a>
+				<div class="list-sub-title">
+					<h4>基地王</h4>
+					<p>过去的历史</p>
+				</div>
+			</li>			
+		</ul>
+	</div>
+	<!-- 列表结束 -->
+	
+	<!-- 底部 -->
+	<div class="well well-large footer">
+		<div class="container">
+			<ul class="breadcrumb">
+			  <li><a href="#">关于我们</a><span class="divider">|</span></li>
+			  <li><a href="#">联系我们</a><span class="divider">|</span></li>
+			  <li><a href="#">客户服务</a><span class="divider">|</span></li>
+			  <li><a href="#">法律声明和隐私条款</a></li>
+			</ul>
+			<p class="muted"><span>Copyright &copy; 2012-2013 Cblink. All Rights Reserved.</span></p>
+			<p class="muted"><span class="">中国艺术版权银行｜京ICP备12044750号-2 </span></p>
+		</div>
+	</div>
+	
+	<!-- 登录窗口 -->
+	<div class="modal hide fade" id="login-modal" data-login>
+		  <div class="login-out">
+			<button type="button" class="close ms-login-colse">×</button>
+			<div class="tit-color">账号登录</div>
+			<div class="tabbable ms-loginwrap">
+				<div class="tab-content ms-personal">
+					<div class="tab-pane active form-horizontal" id="tab1">
+						<div class="control-group">
+							<label class="control-label ms-username" for="login">用户名：</label>
+							<div class="controls ms-control">
+								<input type="text" autocomplete="off"  placeholder="用户名" id="login_name">
+								<a href="#" class="help-inline ms-forget">忘记账号？</a>
+								<p class="text-error ms-tishi"></p>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label ms-username" for="login">密码：</label>
+							<div class="controls ms-control">
+								<input type="password" autocomplete="off"  placeholder="密码" id="login_pwd">
+								<a href="#" class="help-inline ms-forget">忘记密码？</a>
+								<p class="text-error ms-tishi"></p>
+							</div>
+						</div>
+						
+						<div class="form-actions ms-form-action">
+							<button type="submit" class="btn ms-denglu">登 录</button>
+							<a hrsf="#" class="ms-zhuce">注册新账号</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 登录窗口 -->
+	
+	
+	
+	<script type="text/javascript" src="javascripts/jquery/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="javascripts/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/base/1.0.0/base.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/ajax/1.0.0/ajax.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/md5/1.0.0/md5.js"></script>
+	<script type="text/javascript" src="javascripts/app/register/1.0.0/register.js"></script>
+	<script type="text/javascript" src="javascripts/app/login/1.0.0/login.js"></script>
+<!-- 	<script type="text/javascript" src="javascripts/app/special/1.0.0/amazingslider.js"></script>
+	<script type="text/javascript" src="javascripts/app/special/1.0.0/initslider-1.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/duoshuo/1.0.0/embed.js"></script> -->
+	<!-- <script type="text/javascript" src="javascripts/app/special/1.0.0/special.js"></script> -->
+  </body>
+</html>

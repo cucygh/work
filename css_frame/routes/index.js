@@ -39,6 +39,13 @@ exports.special = function (req, res) {
 	});
 };
 
+// ¹«¸æÒ³Ãæ
+exports.notice = function (req, res) {
+	res.render('notice', {
+		title : 'notice'
+	});
+};
+
 
 // ¿çÓò
 exports.ask = function (req, res) {
