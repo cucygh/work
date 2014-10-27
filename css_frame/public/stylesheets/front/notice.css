@@ -34,8 +34,8 @@ body{background:url(/images/notice/bg.gif) repeat 0 0}
 
 /* list-author */
 .list-author{margin-top:1em;}
-.list-author .photo{background:url(/images/notice/photo.jpg) no-repeat 0 0;width:80px;height:120px;overflow:hidden;}
-.list-author .thumbnails li{width:100px;text-align:center;}
+.list-author .photo{background: url(/images/notice/marry.png) no-repeat 14px 0;width:80px;height:120px;overflow:hidden;padding-left: 20px;}
+.list-author .thumbnails li{width:100px;text-align:center;margin:0;padding:1em;border-right:1px dashed #ccc;margin:1em 0;}
 /* footer */
 .well.footer{text-align:center;font-size:12px;color:#99999;margin:8px 0;padding:8px;}
 .well.footer .breadcrumb{margin-bottom:0;}
