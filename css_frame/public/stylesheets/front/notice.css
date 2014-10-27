@@ -29,8 +29,21 @@ body{background:url(/images/notice/bg.gif) repeat 0 0}
 .notice .mbp {width: 528px;height: 306px;background: url(/images/notice/about_tools_mac.png) 0 0 no-repeat;position: absolute;left: 0;top: 34px;}
 .mbp>embed {position: absolute;left: 64px;top: 20px;display: block;}
 .mbp>video {position: absolute;left: 64px;top: 20px;}
-.title {width: 257px;height: 59px;background: url(/images/notice/about_tools_title.svg) 0 0 no-repeat;position: absolute;left: 530px;top: 100px;}
-.sub-title {width: 415px;height: 65px;background: url(/images/notice/about_tools_subtitle.svg) 0 0 no-repeat;position: absolute;left: 530px;top: 160px}
+.title {width: 257px;height: 59px;position: absolute;left: 530px;top: 100px;color: #fff;font-size: 2.5em;}
+.sub-title {width: 100%; position: absolute;left: 530px;top: 160px}
+.sub-title p {color: #fff;}
+.notice .mbp .logo {width: 18em;margin: 7.5em auto 0;background: #f12; line-height: 1.2em;}
+.notice .mbp .logo h3 {line-height: 1em; text-align: center;}
+.notice .mbp .logo h3 span {font-size: 0.7em;line-height: 1em;}
+
+
+
+
+
+
+
+
+
 
 /* list-author */
 .list-author{margin-top:1em;}
