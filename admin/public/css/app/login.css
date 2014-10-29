@@ -1,0 +1,5 @@
+body{background:url(/img/pub/gray_jean.png) repeat 0 0;}
+.wrap{margin-top:60px;}
+.register{margin-left:2em;}
+.login-form{width:500px;margin:-115px 0 0 -250px;position:absolute;top:50%;left:50%;background:#F5F5F5;}
+.login-form legend{background:#ddd;}
