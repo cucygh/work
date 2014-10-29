@@ -24,27 +24,20 @@ body{background:url(/images/notice/bg.gif) repeat 0 0}
 .body .file_area{position:relative;}
 .container .img_logo{width:45px;}
 /* notice */
-.notice{height: 340px;background: url(/images/notice/about_banner.jpg) center top no-repeat;background-size: cover;position: relative;margin-top:45px;}
+.notice{height: 340px;background: url(/images/notice/about_banner.jpg) center top no-repeat;background-size: cover;position: relative;margin-top:40px;}
 .notice .container{position:relative;}
 .notice .mbp {width: 528px;height: 306px;background: url(/images/notice/about_tools_mac.png) 0 0 no-repeat;position: absolute;left: 0;top: 34px;}
 .mbp>embed {position: absolute;left: 64px;top: 20px;display: block;}
 .mbp>video {position: absolute;left: 64px;top: 20px;}
 .title {width: 257px;height: 59px;position: absolute;left: 530px;top: 100px;color: #fff;font-size: 2.5em;}
 .sub-title {width: 100%; position: absolute;left: 530px;top: 160px}
-.sub-title p {color: #fff;}
-.notice .mbp .logo {width: 18em;margin: 7.5em auto 0;background: #f12; line-height: 1.2em;}
+.sub-title p {color: #fff;font-size:16px;padding-left:2em;}
+.notice .mbp .logo {width: 402px;height: 253px;margin: 1.5em auto 0;background: #f12; line-height: 1.2em;background:url(/images/notice/banquan.png) no-repeat 0 0 #fff}
 .notice .mbp .logo h3 {line-height: 1em; text-align: center;}
 .notice .mbp .logo h3 span {font-size: 0.7em;line-height: 1em;}
 
-
-
-
-
-
-
-
-
-
+.more {height: 36px;line-height: 36px;background-color: #fff;border: 1px solid #e5e5e5;padding: 5px;text-align: center;margin: 10px auto;cursor: pointer;}
+.more:hover{ background-color:#4ba6e5; color:#fff;}
 /* list-author */
 .list-author{margin-top:1em;}
 .list-author .photo{background: url(/images/notice/marry.png) no-repeat 14px 0;width:80px;height:120px;overflow:hidden;padding-left: 20px;}
@@ -76,4 +69,40 @@ body{background:url(/images/notice/bg.gif) repeat 0 0}
 #login-modal .login-out{margin-left:0;}
 #login-modal .ms-denglu{margin-left:0;}
 
+html{_background:url(about:blank);}
+body{ background-color:#fff; color:#333; overflow-x: hidden;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,
+button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{ font:12px/1.5 Microsoft YaHei,Tahoma,Helvetica,Arial,simsun}
+address,cite,dfn,em,var,i{font-style:normal;}
+ul,ol{list-style:none;}
+fieldset,img{border:0;}
+h1{font-size:18px;}
+h2{font-size:14px; font-weight:bold;}
+h3{font-size:14px; font-weight:400;}
+h4,h5{font-size:12px; font-weight:400;}
+input,textarea,button,select{font-size:12px; outline:none; resize:none; color:#333;}
+button{cursor: pointer;}
+table{border-collapse:collapse;border-spacing:0;}
+.clear {clear:both; height:0; font-size:0; line-height:0; overflow:hidden;}
+.cle:after, .clearfix:after, .clear_f:after, .cle_float:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.cle, .clearfix, .clear_f, .cle_float{zoom:1}
+.fl {float:left;}
+.fr {float:right;}
 
+a{text-decoration:none; color:#333; -webkit-transition: color .2s;-moz-transition: color .2s;-o-transition: color .2s; -ms-transition: color .2s;transition: color .2s;}
+a:hover{text-decoration:underline; color: #ff7d8e;}
+a:focus{outline:none;}
+::selection {background:#ff7d8e; color:#fff;} 
+
+
+#wrapper{width: 1008px; margin: 15px auto;}
+/*品牌列表*/
+.brand-list{width: 1100px; overflow: hidden; margin-left: -10px;}
+.brand-list .brand-bd{position: relative; margin-left: 10px; margin-top: 5px;}
+.brand-list .item{position: absolute; width: 202px; background-color: #f8f8f8; border: 1px solid #f8f8f8; padding: 18px; top:0; left: 40%; -webkit-transition: all 0.3s;-moz-transition: all 0.3s;-o-transition: all 0.3s;-ms-transition: all 0.3s;transition: all 0.3s;}
+.brand-list .hover{box-shadow: 0px 1px 8px rgba(200,200,200,.6); background-color: #fff; border-color: #c8c8c8;}
+.brand-list .additem{padding: 0; width: 240px; border: none; }
+
+.brand-list .item h3{font-size: 28px; color: #666; font-family: arial; font-weight: bold; line-height: .8; margin-bottom: 20px;}
+.brand-list .item p{margin-bottom: 15px;}
