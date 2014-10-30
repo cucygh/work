@@ -46,6 +46,13 @@ exports.notice = function (req, res) {
 	});
 };
 
+// ¹«¸æÒ³Ãæ
+exports.video = function (req, res) {
+	res.render('zhuanti', {
+		title : 'notice'
+	});
+};
+
 
 // ¿çÓò
 exports.ask = function (req, res) {

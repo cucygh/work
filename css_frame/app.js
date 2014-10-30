@@ -36,6 +36,7 @@ app.get('/personal', routes.personal);
 app.get('/register', routes.register);
 app.get('/special', routes.special);
 app.get('/notice', routes.notice);
+app.get('/video', routes.video);
 app.get('/users', user.list);
 app.post('/ask', routes.ask);
 app.post('/get', routes.ygh);
