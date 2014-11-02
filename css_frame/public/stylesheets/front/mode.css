@@ -71,7 +71,7 @@
 
 /* mode */
 .clear { clear: both;}
-.m-tuijianmd {width: 100%; margin: 10px auto;border: 1px #CC3333 solid; border-top: 3px #CC3333 solid;padding: 1em 0.5em 0;font-size: 14px;}
+.m-tuijianmd {margin: 10px auto;border: 1px #CC3333 solid; border-top: 3px #CC3333 solid;padding: 1em 0.5em 0;font-size: 14px;}
 .m-tuijianmd p { margin: 0;padding: 0;line-height: 2em; color: #646464;}
 .m-tuijianmd .p1 { vertical-align: middle;}
 .m-add_authorize{float:left;*display: inline;*zoom: 1; border-radius:3px; background:#CC3333; padding:5px 15px; margin:20px 0px 20px 0; cursor:pointer;}
@@ -90,13 +90,14 @@
 #m-name .beizhu textarea {width: 70%; height: 100px;float: left;*display: inline;*zoom: 1;margin: 0 0 0 10px;}
 
 /* 授权设置 */
-#tA {background: #F4F4F4;padding: 0.2em;color: #646464;font-size: 14px; line-height: 2em;}
+#tA {background: #F4F4F4;padding: 0.2em 0.2em 0.2em 0.5em;color: #646464;font-size: 14px; line-height: 2em;}
 #tA:after {content: ""; height: 0; display: block; clear: both;}
-#tA .set-addprice {display: inline-block;*display: inline;*zoom: 1;margin: 0;background: #fff;border:1px #CCC solid;border-radius: 2px;padding:0 0.2em;}
-
-
-
-
+#tA .set-cq {margin: 0;}
+#tA .set-c1 {margin: 2em 0 0;}
+#tA .set-year span {display: inline-block;*display: inline;*zoom: 1;vertical-align: middle;height: 30px;line-height: 30px;}
+#tA .set-year select {margin: 0;width: 100px;color: #777;}
+#tA .set-year a {color: #777;font-size: 0.9em;}
+#tA .set-year .set-sprice {margin: 0;width: 88px;}
 
 
 
