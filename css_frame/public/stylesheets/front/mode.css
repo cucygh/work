@@ -64,3 +64,50 @@
 .searching-unit input {background: #FAFAFA;border: 1px solid #DDD;padding: 5px 8px;font-size: 14px;color: #BBB;width: 120px;line-height: 16px;border-radius: 3px;box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.06);}
 #people_search_item input {width: 178px;background: #fff;border-color: #ececec}
 .searching-unit .go {display: block;width: 20px;height: 20px;background: url(/images/personal/menu_sprite.svg) 0 -100px no-repeat;position: absolute;right: 6px;top: 4px;cursor: pointer;}
+
+
+
+
+
+/* mode */
+.clear { clear: both;}
+.m-tuijianmd {width: 100%; margin: 10px auto;border: 1px #CC3333 solid; border-top: 3px #CC3333 solid;padding: 1em 0.5em 0;font-size: 14px;}
+.m-tuijianmd p { margin: 0;padding: 0;line-height: 2em; color: #646464;}
+.m-tuijianmd .p1 { vertical-align: middle;}
+.m-add_authorize{float:left;*display: inline;*zoom: 1; border-radius:3px; background:#CC3333; padding:5px 15px; margin:20px 0px 20px 0; cursor:pointer;}
+.m-add_authorize .icon{ float:left; *display: inline;*zoom: 1;width:25px; height:25px; background:url(/images/msq_img_icon.png) no-repeat center center; display:block; margin:0px 5px 0px 0px;}
+.m-add_authorize .text{ float:left;*display: inline;*zoom: 1; color:#FFF; font-size:15px; line-height:25px;}
+#m-name {clear: both; width: 100%; margin: 20px auto;border-top: 1px #CC3333 solid;padding: 20px 0 0;}
+#m-name:before {content: ""; height: 0; display: block; clear: both;}
+#m-name .m-add-item {width: 100%;height: 30px;line-height: 30px; color: #646464;}
+#m-name .m_title {float: left; *display: inline; *zoom: 1; width: 5em;text-align: right;font-size: 14px;}
+#m-name .m-add-item .m_content {float: left;*display: inline;*zoom: 1;margin: 0 10px;height: 30px;line-height: 30px;}
+#m-name .m-add-item .m_content .m-input-title {width: 324px;}
+#m-name .m-add-item .m_content .check_default {margin: 0; height: 30px;vertical-align: middle;padding: 0;}
+#m-name .m-add-item .m_content span {vertical-align: middle; font-size: 14px;padding: 0 0 0 3px;}
+#m-name .m-add-item .m_content span i {vertical-align: top;}
+#m-name .beizhu {clear: both;margin: 10px 0 0;}
+#m-name .beizhu textarea {width: 70%; height: 100px;float: left;*display: inline;*zoom: 1;margin: 0 0 0 10px;}
+
+/* 授权设置 */
+#tA {background: #F4F4F4;padding: 0.2em;color: #646464;font-size: 14px; line-height: 2em;}
+#tA:after {content: ""; height: 0; display: block; clear: both;}
+#tA .set-addprice {display: inline-block;*display: inline;*zoom: 1;margin: 0;background: #fff;border:1px #CCC solid;border-radius: 2px;padding:0 0.2em;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

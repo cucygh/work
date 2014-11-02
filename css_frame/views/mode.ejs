@@ -71,17 +71,149 @@
 	</div>
 	<!-- 模式 -->
 	<div class="container mode">
-		<legend>
-			<fieldset>当前模式</fieldset>
-			<div class="default">
-				<label class="checkbox inline">
-				  <input type="checkbox"> 默认模式
-				</label>
-				<i class="icon-question-sign"></i>
-				<i class="icon-wrench"></i>
+		<div class="m-tuijianmd">
+			<p class="p1">推荐模式：全自动模式<i class="icon-question-sign"></i><i class="icon-wrench"></i><i class="icon-cog"></i></p>
+			<p class="p2">自定义模式：</p>				
+		</div>
+		<div class="m-add_authorize" id="addBtn">
+			<span class="icon"></span>
+			<span class="text">授权模式</span>
+		</div>
+		<div id="m-name">
+			<div class="m-add-item">
+				<div class="m_title">模式名称:</div>
+				<div class="m_content">
+					<input class="m-input-title" name="title" type="text"> 
+					<input name="isDefault" type="checkbox" class="check_default"><span>默认授权模式<i class="m-star">*</i></span>
+				</div>
+				<div class="clear"></div>
+				<div class="beizhu">
+					<div class="m_title">模式名称:</div>
+					<textarea name="m-md" id=""></textarea>
+					<div class="clear"></div>
+				</div>
 			</div>
-		</legend>
+		</div>
 	</div>
+	
+	<!-- add mode -->
+	<div class="container">
+		<fieldset>
+			<legend>版权定价</legend>
+			<div class="tabbable tabs-left">
+				<ul class="nav nav-tabs">
+					<li class=""><a href="#tA" data-toggle="tab">出版发行</a></li>
+					<li class="active"><a href="#tB" data-toggle="tab">素材使用</a></li>
+					<li class=""><a href="#tC" data-toggle="tab">展览使用</a></li>
+					<li class=""><a href="#tD" data-toggle="tab">广告使用</a></li>
+					<li class=""><a href="#tE" data-toggle="tab">商品化使用</a></li>
+					<li class=""><a href="#tF" data-toggle="tab">出租权</a></li>
+					<li class=""><a href="#tG" data-toggle="tab">版权样品使用权</a></li>
+					<li class=""><a href="#tH" data-toggle="tab">放映权</a></li>
+					<li class=""><a href="#tI" data-toggle="tab">复制权</a></li>
+					<li class=""><a href="#tJ" data-toggle="tab">信息网络传播权</a></li>
+					<li class=""><a href="#tK" data-toggle="tab">原品交易权</a></li>
+					<li class=""><a href="#tL" data-toggle="tab">汇编权</a></li>
+					<li class=""><a href="#tM" data-toggle="tab">其他</a></li>
+				</ul>
+				<div class="tab-content">
+					<!-- 出版发行 -->
+					<div class="tab-pane" id="tA">
+						<label class="checkbox">
+						  <input type="checkbox" value="" name="A001">图书印刷出版发行
+						</label>
+						<p class="set-content">
+							该授权方式允许使用者将作品用于互联网、移动互联网、无线新媒体等各类新媒体中的使用，包括电
+							子图书、报纸、期刊等电子版本的出版发行，使用者在不损害作品完整性的前提下可以对作品进行必要的改动，但
+							该使用仅限在授权期限内一次性编辑使用，如需再次编辑使
+							用需要另行获取授权。该使用不包括广告目的之使用，如需广告使用，需要另行获取广告授权。
+						</p>
+						<a href="#" class="set-addprice">增加价格周期</a>
+						
+						
+						
+						
+						
+						
+					</div>
+					<!-- 素材使用 -->
+					<div class="tab-pane active" id="tB">
+						<label class="checkbox">
+						  <input type="checkbox" value="" name="A001">设计素材使用
+						</label>
+					</div>
+					<!-- 展览使用 -->
+					<div class="tab-pane" id="tC">
+						<label class="checkbox">
+						  <input type="checkbox" value="" name="A001">设计素材使用
+						</label>
+					</div>
+					<!-- 广告使用 -->
+					<div class="tab-pane" id="tD">
+						<label class="checkbox">
+						  <input type="checkbox" value="" name="A001">设计素材使用
+						</label>
+					</div>
+					<!-- 商品化使用 -->
+					<div class="tab-pane" id="tE">
+						<label class="checkbox">
+						  <input type="checkbox" value="" name="A001">设计素材使用
+						</label>
+					</div>
+					<!-- 出租权 -->
+					<div class="tab-pane" id="tE">
+						<label class="checkbox">
+						  <input type="checkbox" value="" name="A001">设计素材使用
+						</label>
+					</div>
+					<!-- 版权样品使用权 -->
+					<div class="tab-pane" id="tE">
+						<label class="checkbox">
+						  <input type="checkbox" value="" name="A001">设计素材使用
+						</label>
+					</div>
+					<!-- 放映权 -->
+					<div class="tab-pane" id="tE">
+						<label class="checkbox">
+						  <input type="checkbox" value="" name="A001">设计素材使用
+						</label>
+					</div>
+					<!-- 复制权 -->
+					<div class="tab-pane" id="tE">
+						<label class="checkbox">
+						  <input type="checkbox" value="" name="A001">设计素材使用
+						</label>
+					</div>
+					<!-- 信息网络传播权 -->
+					<div class="tab-pane" id="tE">
+						<label class="checkbox">
+						  <input type="checkbox" value="" name="A001">设计素材使用
+						</label>
+					</div>
+					<!-- 原品交易权 -->
+					<div class="tab-pane" id="tE">
+						<label class="checkbox">
+						  <input type="checkbox" value="" name="A001">设计素材使用
+						</label>
+					</div>
+					<!-- 汇编权 -->
+					<div class="tab-pane" id="tE">
+						<label class="checkbox">
+						  <input type="checkbox" value="" name="A001">设计素材使用
+						</label>
+					</div>
+					<!-- 其他 -->
+					<div class="tab-pane" id="tE">
+						<label class="checkbox">
+						  <input type="checkbox" value="" name="A001">设计素材使用
+						</label>
+					</div>
+					
+				</div>
+			</div>
+		</fieldset>
+	</div>
+	<!-- add mode end -->
 	
 	<!-- 底部 -->
 	<div class="well well-large footer">
