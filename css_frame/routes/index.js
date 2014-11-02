@@ -38,6 +38,18 @@ exports.special = function (req, res) {
 		title : 'register'
 	});
 };
+// 版权页面
+exports.copyright = function (req, res) {
+	res.render('personal_des', {
+		title : 'register'
+	});
+};
+// 定义版权模式页面
+exports.mode = function (req, res) {
+	res.render('mode', {
+		title : '模式'
+	});
+};
 
 // 公告页面
 exports.notice = function (req, res) {
