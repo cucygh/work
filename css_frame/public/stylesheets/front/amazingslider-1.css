@@ -741,3 +741,35 @@
 .as-btn-navy-small:focus {
   	outline: 0;
 }
+.amazingslider-nav-thumbnail-description-0{display:none!important;}
+.dcz_introduction {
+  width:1110px;
+  /* margin:20px auto 40px; */
+  /* background:url(http://mat1.gtimg.com/auto/insight/images/back_02.png) repeat; */
+  font:14px/1.8 "ËÎÌå";
+  color:#333;
+  padding:10px 30px;
+  height:122px;
+  display:table;
+}
+.dcz_introduction .daoyu {
+  background:url(http://mat1.gtimg.com/auto/insight/images/introduction_back.png) top left no-repeat;
+  padding-left:140px;
+  display:table-cell;
+  vertical-align:middle;
+  height: 136px;
+  text-indent: 28px;
+}
+.article h2 {
+  height:60px;
+  background:url(http://mat1.gtimg.com/auto/7day/dongchazhe/h4_bg.png) left center no-repeat;
+  padding-left:50px;
+  font:100 30px/60px "Î¢ÈíÑÅºÚ";
+  margin-top: 30px;
+}
+.article p {
+  margin:1.5em 0 0;
+  line-height:2.0em !important;
+  font:100 14px/26px "ËÎÌå";
+  text-indent:2em;
+}
