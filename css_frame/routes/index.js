@@ -65,6 +65,13 @@ exports.video = function (req, res) {
 	});
 };
 
+// –≠“È“≥√Ê
+exports.xieyi = function (req, res) {
+	res.render('alert', {
+		title : 'notice'
+	});
+};
+
 
 // øÁ”Ú
 exports.ask = function (req, res) {

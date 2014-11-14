@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>协议</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Bootstrap css file v2.2.1 -->
+	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/bootstrap.css">
+	
+	<!--[if lte IE 6]>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap/bootstrap-ie6.css">
+	<![endif]-->
+	
+	<!-- bsie additional css patch -->
+	<!-- <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/ie.css"> -->
+	
+	<link rel="stylesheet" href="stylesheets/front/v-index.css" />
+	<link rel="stylesheet" href="stylesheets/front/normalize.css" />
+	<link rel="stylesheet" href="stylesheets/front/default.css" />
+	<link rel="stylesheet" href="stylesheets/front/amazingslider-1.css" />
+	<link rel="stylesheet" href="stylesheets/gallery/duoshuo/1.0.0/embed.default.css" />
+
+	
+  </head>
+  <body>
+	<!-- 头部 -->
+	<div class="navbar navbar-fixed-top header">
+		<div class="container">
+			<a href="">yellow world</a>
+			<a href="#" data-toggle="modal" data-target="#login-modal" class="login pull-right">登录</a>
+			<span class="divider pull-right">|</span>
+			<a href="#" class="rigister pull-right">注册</a>
+		</div>
+	</div>
+	
+	<div class="container body">
+		<a href="javascript:void(0)" data-toggle="modal" data-target="#xieyi">生死一线牵</a>
+	</div>
+	
+	
+	<!-- 登录窗口 -->
+	<div class="modal hide fade" id="login-modal" data-login>
+		  <div class="login-out">
+			<button type="button" class="close ms-login-colse">×</button>
+			<div class="tit-color">账号登录</div>
+			<div class="tabbable ms-loginwrap">
+				<div class="tab-content ms-personal">
+					<div class="tab-pane active form-horizontal" id="tab1">
+						<div class="control-group">
+							<label class="control-label ms-username" for="login">用户名：</label>
+							<div class="controls ms-control">
+								<input type="text" autocomplete="off"  placeholder="用户名" id="login_name">
+								<a href="#" class="help-inline ms-forget">忘记账号？</a>
+								<p class="text-error ms-tishi"></p>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label ms-username" for="login">密码：</label>
+							<div class="controls ms-control">
+								<input type="password" autocomplete="off"  placeholder="密码" id="login_pwd">
+								<a href="#" class="help-inline ms-forget">忘记密码？</a>
+								<p class="text-error ms-tishi"></p>
+							</div>
+						</div>
+						
+						<div class="form-actions ms-form-action">
+							<button type="submit" class="btn ms-denglu">登 录</button>
+							<a hrsf="#" class="ms-zhuce">注册新账号</a>
+						</div>					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<!-- 登录窗口 -->
+	
+	<!-- 登录协议 -->
+	<div id="xieyi" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+		<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			  <h3 id="myModalLabel">模态对话框头部</h3>
+		</div>
+		<div class="modal-body">
+		  <h4>模态对话框中的文本</h4>
+		  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>
+
+		  <h4>Popover in a modal</h4>
+		  <p>This <a href="#" role="button" class="btn popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
+
+		  <h4>Tooltips in a modal</h4>
+		  <p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
+		  <hr>
+		  <h4>Overflowing text to show optional scrollbar</h4>
+		  <p>We set a fixed <code>max-height</code> on the <code>.modal-body</code>. Watch it overflow with all this extra lorem ipsum text we've included.</p>
+		  <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+		  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+		  <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+		  <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+		  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+		  <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+		</div>
+		<div class="modal-footer">
+		  <button class="btn" data-dismiss="modal">关闭</button>
+		  <button class="btn btn-primary">Save changes</button>
+		</div>
+	</div>
+	<!-- 登录协议 -->
+	
+	
+	<script type="text/javascript" src="javascripts/jquery/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="javascripts/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/base/1.0.0/base.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/ajax/1.0.0/ajax.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/md5/1.0.0/md5.js"></script>
+	<script type="text/javascript" src="javascripts/app/register/1.0.0/register.js"></script>
+	<script type="text/javascript" src="javascripts/app/login/1.0.0/login.js"></script>
+	<script type="text/javascript" src="javascripts/app/special/1.0.0/amazingslider.js"></script>
+	<script type="text/javascript" src="javascripts/app/special/1.0.0/initslider-1.js"></script>
+	<script type="text/javascript" src="javascripts/gallery/duoshuo/1.0.0/embed.js"></script>
+	<!-- <script type="text/javascript" src="javascripts/app/special/1.0.0/special.js"></script> -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"ygh"};
+	</script>
+  </body>
+</html>

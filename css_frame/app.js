@@ -42,6 +42,7 @@ app.get('/mode', routes.mode);
 app.get('/users', user.list);
 app.post('/ask', routes.ask);
 app.post('/get', routes.ygh);
+app.get('/xieyi', routes.xieyi);
 app.post('/upload', function (req, res) {
 	console.log(req.files);
 	res.json({
