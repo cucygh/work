@@ -43,13 +43,15 @@ app.get('/users', user.list);
 app.post('/ask', routes.ask);
 app.post('/get', routes.ygh);
 app.get('/xieyi', routes.xieyi);
+app.get('/img', routes.imgupload);
 app.post('/upload', function (req, res) {
-	console.log(req.files);
+	/* console.log(req.files);
 	res.json({
 		ygh : 'nothing',
 		file: req.files||'none',
 		body:req.body
-	})
+	}) */
+	res.send('<script type="text/javascript">parent.window.test()</script>')
 });
 
 http.createServer(app).listen(app.get('port'), function () {

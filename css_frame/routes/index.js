@@ -71,6 +71,12 @@ exports.xieyi = function (req, res) {
 		title : 'notice'
 	});
 };
+// –≠“È“≥√Ê
+exports.imgupload = function (req, res) {
+	res.render('uploadimg', {
+		title : 'img'
+	});
+};
 
 
 // øÁ”Ú
